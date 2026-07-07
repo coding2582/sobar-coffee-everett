@@ -280,7 +280,7 @@ section{position:relative}
 .mq-h{display:flex;align-items:center;flex:none}
 .mq-h span{font-family:var(--font-display);font-size:20px;font-style:italic;font-weight:500;padding:0 24px;white-space:nowrap}
 .mq-h .s{font-size:11px;font-style:normal;opacity:.6}
-@keyframes mq{to{transform:translateX(-50%)}}
+@keyframes mq{to{transform:translateX(var(--mq-shift,-50%))}}
 
 /* ════════════════════════════════════════════════════════
    5. BENTO
@@ -337,7 +337,7 @@ section{position:relative}
 .rev-track{display:flex;gap:20px;animation:revscroll 14s linear infinite}
 .rev-mask{position:relative;-webkit-mask:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);mask:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
 .rev-mask:hover .rev-track{animation-play-state:paused}
-@keyframes revscroll{to{transform:translateX(-50%)}}
+@keyframes revscroll{to{transform:translateX(var(--rev-shift,-50%))}}
 .rev-card{background:var(--white);border-radius:var(--r);padding:28px 26px 24px;box-shadow:var(--sh-sm);width:360px;flex:none;position:relative}
 .rev-card::before{content:"\201C";position:absolute;top:6px;right:22px;font-family:var(--font-display);font-size:82px;line-height:1;color:var(--cream-2)}
 .rev-card .stars-i{margin-bottom:13px;position:relative;z-index:1}
@@ -1173,13 +1173,23 @@ footer h4{color:#fff;font-family:var(--font-sans);font-size:13px;font-weight:700
     counters.forEach(function(c){ cio.observe(c); });
   }
 
-  /* ── Seamless marquees (clone content) ── */
-  function loop(track, sel){
+  /* ── Seamless marquees (clone content to fill any viewport width) ── */
+  function loop(track, sel, cssVar, gap){
     var first = track.querySelector(sel); if(!first) return;
-    var clone = first.cloneNode(true); clone.setAttribute('aria-hidden','true'); track.appendChild(clone);
+    gap = gap || 0;
+    var containerW = (track.parentElement || track).getBoundingClientRect().width;
+    var step = first.getBoundingClientRect().width + gap;
+    if (!step) return;
+    var copies = Math.max(2, Math.ceil(containerW / step) + 2);
+    for (var i = 1; i < copies; i++){
+      var clone = first.cloneNode(true);
+      clone.setAttribute('aria-hidden','true');
+      track.appendChild(clone);
+    }
+    track.style.setProperty(cssVar, (-step) + 'px');
   }
-  loop(document.getElementById('mqTrack'), '.mq-h');
-  loop(document.getElementById('revTrack'), '.rev-row');
+  loop(document.getElementById('mqTrack'), '.mq-h', '--mq-shift');
+  loop(document.getElementById('revTrack'), '.rev-row', '--rev-shift', 20);
 
   /* ── Hero mouse parallax ── */
   if (!reduce && window.matchMedia('(pointer:fine)').matches){
