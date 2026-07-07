@@ -1,0 +1,1217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!--
+  ══════════════════════════════════════════════════════════════════
+  SOBAR COFFEE · 2820 Colby Ave, Everett, WA 98201 · (425) 470-3520
+  Single-file modern website. No build step. Open by double-clicking.
+
+  IMAGES — drop these into the /images folder next to this file.
+  Each spot falls back to an Unsplash placeholder until you do.
+  ┌──────────────────────┬──────────────────────────────────────────┐
+  │ images/hero.jpg      │ Hero: your best drink or the bar (tall)  │
+  │ images/hero-2.jpg    │ Small floating hero photo (interior)     │
+  │ images/bento-1.jpg   │ Wide bento tile (storefront / room)      │
+  │ images/bento-2.jpg   │ Square bento tile (pour / latte art)     │
+  │ images/bento-3.jpg   │ Tall bento tile (pastry case)            │
+  │ images/latte.jpg     │ Honey Lavender Latte                     │
+  │ images/iced.jpg      │ Iced Shaken Espresso                     │
+  │ images/rose.jpg      │ Rose Cardamom Latte                      │
+  │ images/menu.jpg      │ Barista at the machine / menu board      │
+  │ images/story.jpg     │ Owner(s) or team behind the counter      │
+  │ images/og-cover.jpg  │ 1200x630 photo for social link previews  │
+  └──────────────────────┴──────────────────────────────────────────┘
+
+  EDIT before launch (search "EDIT:"):
+  1. Order Online link — paste your exact order.online URL
+  2. Founding year in the "Since" badge + story copy
+  3. Review quotes — swap in real Google reviews
+  4. Menu items + prices — placeholders in your $1-10 range
+  ══════════════════════════════════════════════════════════════════
+-->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sobar Coffee | Coffee Shop in Everett, WA | Espresso &amp; Pastries on Colby Ave</title>
+<meta name="description" content="Sobar Coffee is a locally owned coffee shop at 2820 Colby Ave in downtown Everett, WA. Espresso, house-made syrups, fresh pastries, and a 4.6-star Google rating. Open Monday to Saturday. Dine-in, takeout, and delivery.">
+<meta name="keywords" content="coffee shop near me, coffee shop Everett WA, espresso Everett, latte near me, best coffee Everett, cafe Colby Ave, coffee downtown Everett, breakfast Everett WA, coffee delivery Everett">
+<meta name="author" content="Sobar Coffee">
+<link rel="canonical" href="https://sobarcoffee.com/">
+
+<meta property="og:type" content="business.business">
+<meta property="og:title" content="Sobar Coffee | Coffee Shop in Everett, WA">
+<meta property="og:description" content="Espresso, house-made syrups, and fresh pastries at 2820 Colby Ave in downtown Everett. Rated 4.6 stars by your neighbors. Open Mon-Sat.">
+<meta property="og:url" content="https://sobarcoffee.com/">
+<meta property="og:image" content="images/og-cover.jpg">
+<meta property="og:site_name" content="Sobar Coffee">
+<meta property="business:contact_data:street_address" content="2820 Colby Ave">
+<meta property="business:contact_data:locality" content="Everett">
+<meta property="business:contact_data:region" content="WA">
+<meta property="business:contact_data:postal_code" content="98201">
+<meta property="business:contact_data:phone_number" content="+14254703520">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%23618047'/%3E%3Cpath d='M12 26v13h10' fill='none' stroke='%23fff' stroke-width='3.2'/%3E%3Cpath d='M42 25h10v13' fill='none' stroke='%23fff' stroke-width='3.2'/%3E%3Ctext x='32' y='38' font-family='Arial,sans-serif' font-size='15' font-weight='800' fill='%23fff' text-anchor='middle'%3Esobar%3C/text%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,400;1,9..144,500;1,9..144,600;1,9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CafeOrCoffeeShop",
+  "name": "Sobar Coffee",
+  "image": "images/og-cover.jpg",
+  "url": "https://sobarcoffee.com/",
+  "telephone": "+14254703520",
+  "priceRange": "$",
+  "servesCuisine": "Coffee, Espresso, Pastries",
+  "address": { "@type": "PostalAddress", "streetAddress": "2820 Colby Ave", "addressLocality": "Everett", "addressRegion": "WA", "postalCode": "98201", "addressCountry": "US" },
+  "geo": { "@type": "GeoCoordinates", "latitude": 47.9798822, "longitude": -122.2090395 },
+  "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.6", "reviewCount": "77" },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "07:00", "closes": "17:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "10:00", "closes": "17:00" }
+  ],
+  "sameAs": ["https://www.instagram.com/sobar.coffee"]
+}
+</script>
+
+<style>
+/* ════════════════════════════════════════════════════════
+   1. DESIGN TOKENS — rebrand everything from here
+   ════════════════════════════════════════════════════════ */
+:root{
+  --cream:      #f7f8f4;
+  --cream-2:    #eef1e9;
+  --sage:       #618047;
+  --sage-dark:  #4d6738;
+  --sage-deep:  #3a4e2a;
+  --forest:     #26331d;
+  --gold:       #c89a5e;
+  --gold-light: #e2c091;
+  --clay:       #4a7fb5;
+  --ink:        #1d2413;
+  --grey:       #4f5646;
+  --grey-soft:  #878e7f;
+  --line:       #e0e4d8;
+  --white:      #ffffff;
+
+  --font-display:'Fraunces', Georgia, serif;
+  --font-sans:  'Inter', system-ui, -apple-system, sans-serif;
+
+  --r-sm: 12px;
+  --r:    20px;
+  --r-lg: 30px;
+  --r-xl: 40px;
+  --r-pill: 999px;
+
+  --sh-sm: 0 2px 14px rgba(33,40,20,.06);
+  --sh:    0 16px 40px rgba(33,40,20,.10);
+  --sh-lg: 0 30px 70px rgba(33,40,20,.18);
+  --sh-gold: 0 14px 34px rgba(200,154,94,.36);
+  --sh-sage: 0 14px 34px rgba(97,128,71,.40);
+
+  --ease: cubic-bezier(.22,.61,.36,1);
+  --ease-out: cubic-bezier(.16,1,.3,1);
+  --spd: .35s;
+  --nav-h: 76px;
+}
+
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--nav-h) + 14px);-webkit-text-size-adjust:100%}
+body{font-family:var(--font-sans);color:var(--grey);background:var(--cream);font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body.lock{overflow:hidden}
+img{display:block;max-width:100%}
+a{text-decoration:none;color:inherit}
+ul{list-style:none}
+button{font-family:inherit;border:none;background:none;cursor:pointer;color:inherit}
+h1,h2,h3,h4{font-family:var(--font-display);color:var(--ink);line-height:1.05;font-weight:600;font-optical-sizing:auto}
+em{font-style:italic}
+::selection{background:var(--sage);color:#fff}
+:focus-visible{outline:3px solid rgba(97,128,71,.6);outline-offset:3px;border-radius:6px}
+
+.wrap{width:min(1240px,100% - 44px);margin-inline:auto}
+section{position:relative}
+
+.skip-link{position:absolute;top:-60px;left:16px;background:var(--forest);color:#fff;padding:11px 20px;border-radius:0 0 12px 12px;z-index:300;transition:top .2s}
+.skip-link:focus{top:0}
+
+/* Grain + scroll progress */
+.grain{position:fixed;inset:0;z-index:9999;pointer-events:none;opacity:.4;mix-blend-mode:soft-light;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E")}
+.progress{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--sage),var(--gold));z-index:200;transition:width .1s linear}
+
+/* Type helpers */
+.eyebrow{display:inline-flex;align-items:center;gap:11px;font-size:12.5px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--sage-dark)}
+.eyebrow::before{content:"";width:30px;height:1.5px;background:var(--gold)}
+.eyebrow.on-dark{color:var(--gold-light)}
+.head{max-width:660px;margin-bottom:48px}
+.head h2{font-size:clamp(2.3rem,5.4vw,4rem);margin:20px 0 16px;letter-spacing:-.02em;font-weight:600}
+.head h2 em{color:var(--sage);font-weight:500}
+.head p{font-size:clamp(1rem,1.4vw,1.15rem);max-width:520px}
+.head.center{margin-inline:auto;text-align:center}
+.head.center .eyebrow{gap:0}
+.head.center .eyebrow::before{display:none}
+
+/* Buttons */
+.btn{position:relative;display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:16px 34px;border-radius:var(--r-pill);font-weight:600;font-size:15px;line-height:1;transition:transform var(--spd) var(--ease),background var(--spd),color var(--spd),box-shadow var(--spd),border-color var(--spd);cursor:pointer;white-space:nowrap;will-change:transform}
+.btn svg{width:17px;height:17px;flex:none}
+.btn-primary{background:var(--sage);color:#fff;box-shadow:var(--sh-sage)}
+.btn-primary:hover{background:var(--sage-dark);transform:translateY(-3px);box-shadow:0 20px 40px rgba(97,128,71,.5)}
+.btn-gold{background:var(--gold);color:#3a2c15;box-shadow:var(--sh-gold)}
+.btn-gold:hover{background:var(--gold-light);transform:translateY(-3px)}
+.btn-ghost{border:1.5px solid rgba(255,255,255,.55);color:#fff;background:rgba(255,255,255,.07);backdrop-filter:blur(6px)}
+.btn-ghost:hover{background:#fff;color:var(--ink);transform:translateY(-3px)}
+.btn-dark{background:var(--ink);color:var(--cream)}
+.btn-dark:hover{background:var(--sage-deep);transform:translateY(-3px)}
+.btn-outline{border:1.5px solid var(--sage);color:var(--sage-dark);background:transparent}
+.btn-outline:hover{background:var(--sage);color:#fff;transform:translateY(-3px)}
+.btn-sm{padding:12px 22px;font-size:14px}
+
+/* ════════════════════════════════════════════════════════
+   2. ANNOUNCEMENT + NAV
+   ════════════════════════════════════════════════════════ */
+.announce{background:var(--forest);color:#e5ecd6;text-align:center;padding:9px 18px;font-size:13px;font-weight:500;letter-spacing:.01em;position:relative;z-index:105}
+.announce strong{color:var(--gold-light);font-weight:600}
+
+#nav{position:sticky;top:0;z-index:100;height:var(--nav-h);display:flex;align-items:center;color:var(--ink);background:rgba(246,244,236,.82);backdrop-filter:blur(18px) saturate(140%);-webkit-backdrop-filter:blur(18px) saturate(140%);box-shadow:0 8px 30px rgba(33,40,20,.10);transition:background .4s var(--ease),box-shadow .4s,color .4s,height .4s}
+#nav .nav-in{display:flex;align-items:center;gap:26px;width:100%}
+.brand{display:inline-flex;align-items:center;gap:12px;font-family:var(--font-sans);font-size:24px;font-weight:800;letter-spacing:.01em;color:inherit}
+.brand .mark{width:42px;height:42px;border-radius:50%;background:var(--sage);display:grid;place-items:center;flex:none;box-shadow:var(--sh-sm);transition:transform var(--spd) var(--ease)}
+.brand:hover .mark{transform:rotate(-8deg) scale(1.05)}
+.brand .mark svg{width:100%;height:100%;color:#fff}
+.brand .bt{display:flex;flex-direction:column;line-height:1}
+.brand .wm{position:relative;display:inline-block;padding:6px 14px 7px 12px;text-transform:lowercase;line-height:1}
+.brand .wm::before{content:"";position:absolute;left:0;bottom:1px;width:10px;height:16px;border-left:2.5px solid currentColor;border-bottom:2.5px solid currentColor}
+.brand .wm::after{content:"";position:absolute;right:0;top:1px;width:10px;height:16px;border-right:2.5px solid currentColor;border-top:2.5px solid currentColor}
+.brand .bt small{font-family:var(--font-sans);font-size:8.5px;font-weight:600;letter-spacing:.3em;text-transform:uppercase;opacity:.7;margin-top:4px;padding-left:11px}
+.nav-links{display:flex;gap:30px;margin-inline:auto}
+.nav-links a{font-size:14.5px;font-weight:500;position:relative;padding:6px 0;opacity:.92}
+.nav-links a::after{content:"";position:absolute;left:0;bottom:0;width:100%;height:2px;background:var(--gold);transform:scaleX(0);transform-origin:right;transition:transform var(--spd) var(--ease)}
+.nav-links a:hover::after{transform:scaleX(1);transform-origin:left}
+.nav-act{display:flex;align-items:center;gap:12px}
+.nav-call{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:600;padding:11px 18px;border-radius:var(--r-pill);border:1.5px solid currentColor;opacity:.9;transition:all var(--spd)}
+.nav-call:hover{background:var(--sage);border-color:var(--sage);color:#fff;opacity:1}
+.nav-call svg{width:15px;height:15px}
+.burger{display:none;flex-direction:column;gap:5px;padding:10px;z-index:106}
+.burger span{width:24px;height:2px;background:currentColor;border-radius:2px;transition:transform var(--spd) var(--ease),opacity var(--spd)}
+
+.mobile{position:fixed;inset:0;background:var(--forest);z-index:110;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:4px;opacity:0;visibility:hidden;transition:opacity .4s var(--ease),visibility .4s}
+.mobile.open{opacity:1;visibility:visible}
+.mobile a.ml{font-family:var(--font-display);font-size:clamp(30px,8vw,44px);color:var(--cream);padding:8px;opacity:0;transform:translateY(16px);transition:opacity .45s var(--ease),transform .45s var(--ease),color .2s}
+.mobile.open a.ml{opacity:1;transform:none}
+.mobile.open a.ml:nth-child(2){transition-delay:.06s}
+.mobile.open a.ml:nth-child(3){transition-delay:.12s}
+.mobile.open a.ml:nth-child(4){transition-delay:.18s}
+.mobile.open a.ml:nth-child(5){transition-delay:.24s}
+.mobile a.ml:hover{color:var(--gold-light)}
+.mm-x{position:absolute;top:22px;right:24px;color:var(--cream);padding:10px}
+.mm-x svg{width:30px;height:30px}
+.mm-act{display:flex;gap:14px;margin-top:28px;flex-wrap:wrap;justify-content:center}
+
+/* ════════════════════════════════════════════════════════
+   3. HERO (editorial split + floating collage)
+   ════════════════════════════════════════════════════════ */
+.hero{position:relative;margin-top:calc(var(--nav-h) * -1);padding-top:var(--nav-h);overflow:hidden;background:
+  radial-gradient(120% 90% at 88% 8%, rgba(200,154,94,.16), transparent 55%),
+  radial-gradient(90% 80% at 6% 92%, rgba(97,128,71,.16), transparent 55%),
+  var(--cream)}
+.hero-in{display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center;min-height:calc(100vh - var(--nav-h));min-height:calc(100svh - var(--nav-h));padding:60px 0 90px}
+.hero-copy{position:relative;z-index:3}
+.hero-copy .reveal-line{overflow:hidden;display:block}
+.hero h1{font-size:clamp(3rem,7.2vw,5.6rem);letter-spacing:-.03em;color:var(--ink);font-weight:600;margin:22px 0 22px}
+.hero h1 em{color:var(--sage);font-weight:500}
+.hero h1 .word{display:inline-block;transform:translateY(110%);opacity:0;animation:wordUp .9s var(--ease-out) forwards}
+.hero h1 .word:nth-child(2){animation-delay:.08s}
+.hero h1 .word:nth-child(3){animation-delay:.16s}
+.hero h1 .word:nth-child(4){animation-delay:.24s}
+.hero h1 .word:nth-child(5){animation-delay:.32s}
+@keyframes wordUp{to{transform:none;opacity:1}}
+.hero .lead{font-size:clamp(1.05rem,1.6vw,1.22rem);max-width:480px;color:var(--grey);opacity:0;animation:fadeUp .8s .5s var(--ease) forwards}
+.hero-cta{display:flex;gap:14px;margin-top:34px;flex-wrap:wrap;opacity:0;animation:fadeUp .8s .62s var(--ease) forwards}
+.hero-trust{display:flex;align-items:center;gap:18px;margin-top:34px;flex-wrap:wrap;opacity:0;animation:fadeUp .8s .74s var(--ease) forwards}
+.hero-trust .avatars{display:flex}
+.hero-trust .avatars span{width:38px;height:38px;border-radius:50%;border:2.5px solid var(--cream);display:grid;place-items:center;color:#fff;font-size:12px;font-weight:700;margin-left:-12px;box-shadow:var(--sh-sm)}
+.hero-trust .avatars span:first-child{margin-left:0}
+.hero-trust .avatars span:nth-child(1){background:var(--sage)}
+.hero-trust .avatars span:nth-child(2){background:var(--gold)}
+.hero-trust .avatars span:nth-child(3){background:var(--clay)}
+.hero-trust .avatars span:nth-child(4){background:var(--sage-dark)}
+.hero-trust .tx b{color:var(--ink);font-size:14px}
+.hero-trust .tx{font-size:13px;line-height:1.4}
+.hero-trust .tx .gold{color:var(--gold);letter-spacing:1px}
+@keyframes fadeUp{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+
+.hero-visual{position:relative;height:min(74vh,620px);opacity:0;animation:fadeUp 1s .3s var(--ease) forwards}
+.hv-main{position:absolute;inset:0;border-radius:var(--r-xl);overflow:hidden;box-shadow:var(--sh-lg)}
+.hv-main img{width:100%;height:100%;object-fit:cover}
+.hv-blob{position:absolute;border-radius:50%;filter:blur(4px);z-index:-1}
+.hv-blob.b1{width:280px;height:280px;background:rgba(97,128,71,.5);top:-40px;right:-30px}
+.hv-blob.b2{width:220px;height:220px;background:rgba(200,154,94,.45);bottom:-40px;left:-40px}
+.float{position:absolute;background:rgba(255,255,255,.82);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.6);border-radius:var(--r);box-shadow:var(--sh);z-index:4;will-change:transform}
+.float-rating{top:26px;left:-28px;padding:16px 20px;display:flex;align-items:center;gap:13px}
+.float-rating .score{font-family:var(--font-display);font-size:32px;font-weight:600;color:var(--ink);line-height:1}
+.float-rating .rmeta small{display:block;font-size:11px;color:var(--grey);font-weight:500}
+.float-rating .rmeta .gs{color:var(--gold);font-size:13px;letter-spacing:1px}
+.float-pill{bottom:34px;right:-24px;padding:13px 20px;display:flex;align-items:center;gap:10px;font-size:13.5px;font-weight:600;color:var(--ink)}
+.float-pill .dot{width:9px;height:9px;border-radius:50%;background:#79b845;position:relative;flex:none}
+.float-pill .dot::after{content:"";position:absolute;inset:-4px;border-radius:50%;border:2px solid #79b845;opacity:.7;animation:pulse 1.9s ease-out infinite}
+.float-pill.is-closed .dot{background:var(--gold)}
+.float-pill.is-closed .dot::after{border-color:var(--gold)}
+@keyframes pulse{0%{transform:scale(.6);opacity:.8}100%{transform:scale(1.6);opacity:0}}
+.float-mini{width:120px;height:120px;bottom:-26px;left:-30px;border-radius:24px;overflow:hidden;padding:0}
+.float-mini img{width:100%;height:100%;object-fit:cover}
+
+/* Stats bar */
+.stats{position:relative;z-index:5;margin-top:-42px}
+.stats-card{background:var(--forest);color:var(--cream);border-radius:var(--r-lg);box-shadow:var(--sh-lg);display:grid;grid-template-columns:repeat(4,1fr);overflow:hidden}
+.stat{padding:34px 22px;text-align:center;position:relative}
+.stat + .stat::before{content:"";position:absolute;left:0;top:28%;height:44%;width:1px;background:rgba(255,255,255,.12)}
+.stat .n{font-family:var(--font-display);font-size:clamp(2rem,3.6vw,2.9rem);font-weight:600;color:#fff;line-height:1}
+.stat .n sup{font-size:.42em;color:var(--gold-light);top:-.85em}
+.stat .l{font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-light);margin-top:11px;opacity:.9}
+
+/* ════════════════════════════════════════════════════════
+   4. MARQUEE
+   ════════════════════════════════════════════════════════ */
+.marquee{background:var(--sage);color:#f2f1e6;overflow:hidden;padding:17px 0;margin-top:70px}
+.mq-track{display:flex;width:max-content;animation:mq 34s linear infinite}
+.marquee:hover .mq-track{animation-play-state:paused}
+.mq-h{display:flex;align-items:center;flex:none}
+.mq-h span{font-family:var(--font-display);font-size:20px;font-style:italic;font-weight:500;padding:0 24px;white-space:nowrap}
+.mq-h .s{font-size:11px;font-style:normal;opacity:.6}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+/* ════════════════════════════════════════════════════════
+   5. BENTO
+   ════════════════════════════════════════════════════════ */
+.bento{padding:96px 0 30px}
+.bento-grid{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:200px;gap:18px}
+.tile{position:relative;border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--sh-sm);transition:transform .5s var(--ease),box-shadow .5s}
+.tile:hover{transform:translateY(-6px);box-shadow:var(--sh-lg)}
+.tile img{width:100%;height:100%;object-fit:cover;transition:transform .8s var(--ease)}
+.tile.img:hover img{transform:scale(1.07)}
+.tile .cap{position:absolute;left:20px;bottom:18px;color:#fff;z-index:2;font-weight:600;font-size:15px;text-shadow:0 2px 12px rgba(0,0,0,.5)}
+.tile.img::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(20,24,10,.6))}
+.t-wide{grid-column:span 2;grid-row:span 2}
+.t-tall{grid-row:span 2}
+.t-quote{grid-column:span 2;background:var(--forest);color:var(--cream);padding:32px;display:flex;flex-direction:column;justify-content:center}
+.t-quote .q{font-family:var(--font-display);font-style:italic;font-size:clamp(1.2rem,2vw,1.55rem);line-height:1.35;color:#fff}
+.t-quote .qby{margin-top:16px;font-size:13px;color:var(--gold-light);font-weight:600;letter-spacing:.06em}
+.t-stat{background:var(--gold);color:#3a2c15;padding:26px;display:flex;flex-direction:column;justify-content:center}
+.t-stat .big{font-family:var(--font-display);font-size:clamp(2.4rem,4vw,3.4rem);font-weight:700;line-height:.95}
+.t-stat .sm{font-size:13.5px;font-weight:600;margin-top:8px;max-width:150px}
+.t-sage{background:var(--sage);color:#fff}
+
+/* ════════════════════════════════════════════════════════
+   6. FAVORITES
+   ════════════════════════════════════════════════════════ */
+.fav{padding:90px 0}
+.fav-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.card{background:var(--white);border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--sh-sm);transition:transform .5s var(--ease),box-shadow .5s;will-change:transform}
+.card:hover{transform:translateY(-10px);box-shadow:var(--sh-lg)}
+.card-media{position:relative;overflow:hidden}
+.card-media img{width:100%;height:280px;object-fit:cover;transition:transform .8s var(--ease)}
+.card:hover .card-media img{transform:scale(1.08)}
+.tag{position:absolute;top:16px;left:16px;background:rgba(255,255,255,.92);backdrop-filter:blur(6px);color:var(--sage-dark);font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:8px 15px;border-radius:var(--r-pill);box-shadow:var(--sh-sm)}
+.card.hot .tag{background:var(--gold);color:#3a2c15}
+.card-body{padding:26px 26px 28px}
+.card-body h3{font-size:25px;margin-bottom:9px;letter-spacing:-.01em}
+.card-body p{font-size:14.5px;line-height:1.6}
+.card-foot{display:flex;align-items:center;justify-content:space-between;margin-top:22px;padding-top:20px;border-top:1px solid var(--line)}
+.price{font-family:var(--font-display);font-size:24px;font-weight:600;color:var(--sage-dark);font-variant-numeric:tabular-nums}
+.stars-i{color:var(--gold);font-size:14px;letter-spacing:2px;display:flex;align-items:center;gap:7px}
+.stars-i b{color:var(--ink);font-size:13px;font-family:var(--font-sans);letter-spacing:0}
+
+/* ════════════════════════════════════════════════════════
+   7. REVIEWS (auto-scroll wall)
+   ════════════════════════════════════════════════════════ */
+.reviews{background:var(--cream-2);padding:92px 0;overflow:hidden}
+.rev-top{display:flex;align-items:flex-end;justify-content:space-between;gap:30px;flex-wrap:wrap;margin-bottom:52px}
+.rev-badge{background:var(--white);border-radius:var(--r);box-shadow:var(--sh);display:inline-flex;align-items:center;gap:20px;padding:20px 30px}
+.rev-badge .big{font-family:var(--font-display);font-size:50px;font-weight:600;color:var(--ink);line-height:1}
+.stars{position:relative;display:inline-block;font-size:19px;letter-spacing:3px;color:#d9d5c2;line-height:1}
+.stars .fill{position:absolute;top:0;left:0;width:var(--fill,92%);overflow:hidden;white-space:nowrap;color:var(--gold)}
+.rev-badge small{display:block;margin-top:6px;font-size:13px;color:var(--grey);font-weight:500}
+.rev-row{display:flex;gap:20px;width:max-content}
+.rev-track{display:flex;gap:20px;animation:revscroll 14s linear infinite}
+.rev-mask{position:relative;-webkit-mask:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);mask:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
+.rev-mask:hover .rev-track{animation-play-state:paused}
+@keyframes revscroll{to{transform:translateX(-50%)}}
+.rev-card{background:var(--white);border-radius:var(--r);padding:28px 26px 24px;box-shadow:var(--sh-sm);width:360px;flex:none;position:relative}
+.rev-card::before{content:"\201C";position:absolute;top:6px;right:22px;font-family:var(--font-display);font-size:82px;line-height:1;color:var(--cream-2)}
+.rev-card .stars-i{margin-bottom:13px;position:relative;z-index:1}
+.rev-card blockquote{font-size:15px;line-height:1.62;color:var(--grey);position:relative;z-index:1}
+.reviewer{display:flex;align-items:center;gap:12px;margin-top:20px;padding-top:16px;border-top:1px solid var(--line)}
+.av{width:42px;height:42px;border-radius:50%;color:#fff;display:grid;place-items:center;font-weight:700;font-size:14px;flex:none}
+.reviewer .who b{display:block;color:var(--ink);font-size:14px}
+.reviewer .who span{font-size:12px;color:var(--grey-soft)}
+
+/* ════════════════════════════════════════════════════════
+   8. MENU
+   ════════════════════════════════════════════════════════ */
+.menu{padding:94px 0}
+.menu .wrap{position:relative;z-index:1}
+.menu-doodles{position:absolute;inset:0;z-index:0;overflow:hidden;pointer-events:none;color:var(--sage-dark)}
+.menu-doodles .dood{position:absolute;fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;opacity:.18}
+.menu-doodles .dc1,.menu-doodles .dc3,.menu-doodles .dc6,.menu-doodles .dc8{color:var(--gold);opacity:.26}
+.dc1{top:26px;right:2%;width:88px}
+.dc2{top:53%;left:2%;width:82px;transform:rotate(-8deg)}
+.dc3{bottom:7%;right:4%;width:104px}
+.dc4{bottom:5%;left:3%;width:70px}
+.dc5{top:39%;left:2.5%;width:58px}
+.dc6{top:12%;right:14%;width:32px}
+.dc7{top:27%;right:30%;width:26px}
+.dc8{top:58%;right:3%;width:42px}
+.dc9{top:70%;left:6%;width:34px}
+@media(max-width:900px){.dc5,.dc7,.dc9{display:none}}
+.menu-layout{display:grid;grid-template-columns:340px 1fr;gap:56px;align-items:start}
+.menu-side{position:sticky;top:calc(var(--nav-h) + 24px)}
+.menu-side .mimg{position:relative;border-radius:var(--r-lg);overflow:hidden;height:250px;margin-bottom:24px;box-shadow:var(--sh)}
+.menu-side .mimg img{width:100%;height:100%;object-fit:cover}
+.menu-side .mimg .badge-round{position:absolute;right:16px;top:16px;width:78px;height:78px;border-radius:50%;background:var(--gold);color:#3a2c15;display:grid;place-content:center;text-align:center;transform:rotate(-8deg);box-shadow:var(--sh)}
+.menu-side .mimg .badge-round b{font-family:var(--font-display);font-size:20px;line-height:1}
+.menu-side .mimg .badge-round small{font-size:8px;font-weight:700;letter-spacing:.12em;text-transform:uppercase}
+.menu-tabs{display:flex;flex-direction:column;gap:8px}
+.mtab{display:flex;align-items:center;justify-content:space-between;text-align:left;padding:15px 20px;border-radius:var(--r-sm);border:1.5px solid var(--line);background:var(--white);color:var(--ink);font-weight:600;font-size:15px;transition:all var(--spd) var(--ease)}
+.mtab svg{width:15px;height:15px;opacity:0;transform:translateX(-5px);transition:all var(--spd)}
+.mtab:hover{border-color:var(--sage);color:var(--sage-dark)}
+.mtab.on{background:var(--sage);border-color:var(--sage);color:#fff;box-shadow:var(--sh-sage)}
+.mtab.on svg{opacity:1;transform:none}
+.milk{margin-top:22px;background:var(--cream-2);border-radius:var(--r-sm);padding:16px 18px;font-size:13.5px;line-height:1.55}
+.milk b{color:var(--sage-dark)}
+.mpanel{display:none}
+.mpanel.on{display:block;animation:panelin .45s var(--ease)}
+@keyframes panelin{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+.mpanel h3{font-size:31px;margin-bottom:6px;letter-spacing:-.01em}
+.mpanel .psub{font-size:15px;margin-bottom:28px;color:var(--grey-soft)}
+.mrow{display:flex;align-items:baseline;gap:14px;padding:18px 0;border-bottom:1px dashed var(--line)}
+.mrow:first-of-type{border-top:1px dashed var(--line)}
+.mrow .mi{flex:1}
+.mrow .mi h4{font-size:18.5px;font-weight:600;display:inline;font-family:var(--font-sans)}
+.mrow .mi p{font-size:14px;color:var(--grey-soft);margin-top:3px}
+.mrow .dots{flex:1;border-bottom:2px dotted var(--line);transform:translateY(-5px);min-width:22px}
+.mrow .mp{font-family:var(--font-display);font-weight:600;font-size:19px;color:var(--sage-dark);font-variant-numeric:tabular-nums}
+.mfoot{margin-top:34px;display:flex;align-items:center;gap:22px;flex-wrap:wrap}
+.mfoot p{font-size:13.5px;color:var(--grey-soft);flex:1;min-width:230px}
+
+/* ════════════════════════════════════════════════════════
+   9. STORY
+   ════════════════════════════════════════════════════════ */
+.story{background:var(--white);padding:96px 0}
+.story-grid{display:grid;grid-template-columns:1fr 1.06fr;gap:72px;align-items:center}
+.story-photo{position:relative}
+.story-photo img{border-radius:var(--r-xl);box-shadow:var(--sh-lg);width:100%;height:580px;object-fit:cover}
+.story-photo .since{position:absolute;right:-24px;bottom:44px;width:128px;height:128px;border-radius:50%;background:var(--sage);color:#fff;display:grid;place-content:center;text-align:center;transform:rotate(-8deg);box-shadow:var(--sh)}
+.story-photo .since small{font-size:10.5px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;opacity:.85}
+.story-photo .since b{font-family:var(--font-display);font-size:36px;line-height:1.05}
+.pull{font-family:var(--font-display);font-style:italic;font-size:clamp(1.3rem,2.3vw,1.65rem);color:var(--sage-dark);line-height:1.4;margin:24px 0}
+.story-copy p{margin-bottom:18px;font-size:16.5px}
+.values{margin-top:34px;display:grid;gap:20px}
+.value{display:flex;gap:17px;align-items:flex-start}
+.value .vi{width:50px;height:50px;flex:none;border-radius:15px;background:var(--cream-2);color:var(--sage-dark);display:grid;place-items:center}
+.value .vi svg{width:23px;height:23px}
+.value h4{font-size:17.5px;margin-bottom:3px;font-family:var(--font-sans);font-weight:700}
+.value p{font-size:14.5px;margin:0}
+
+/* ════════════════════════════════════════════════════════
+   10. VISIT
+   ════════════════════════════════════════════════════════ */
+.visit{background:var(--cream-2);padding:94px 0}
+.visit-grid{display:grid;grid-template-columns:1fr 1.12fr;gap:26px;align-items:start}
+.hours-card,.map-card{background:var(--white);border-radius:var(--r-lg);box-shadow:var(--sh-sm);overflow:hidden}
+.hours-card{padding:36px 34px 32px}
+.hours-head{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-bottom:4px}
+.hours-head h3{font-size:27px}
+.obadge{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:9px 17px;border-radius:var(--r-pill);background:#e6f0d9;color:#4c6b2a}
+.obadge .dot{width:8px;height:8px;border-radius:50%;background:#6fae3f;animation:blink 1.9s ease-in-out infinite}
+.obadge.closed{background:#f6e6d5;color:#9a5b2c}
+.obadge.closed .dot{background:var(--gold)}
+@keyframes blink{50%{opacity:.35}}
+.hmsg{font-size:13.5px;color:var(--grey-soft);margin:14px 0 18px;min-height:1.4em}
+.hlist li{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 14px;border-bottom:1px solid var(--line);font-size:15px;border-radius:10px;transition:background .3s}
+.hlist li:last-child{border-bottom:none}
+.hlist .d{font-weight:600;color:var(--ink);display:flex;align-items:center;gap:10px}
+.hlist .t{font-variant-numeric:tabular-nums}
+.hlist li.off .t{color:var(--grey-soft);font-style:italic}
+.hlist li.now{background:#eef2e4;border-bottom-color:transparent}
+.hlist li.now .t{color:var(--sage-dark);font-weight:600}
+.tflag{display:none;font-size:10.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);background:rgba(200,154,94,.16);padding:3px 8px;border-radius:var(--r-pill)}
+li.now .tflag{display:inline}
+.amen{display:flex;flex-wrap:wrap;gap:9px;margin-top:24px}
+.chip{display:inline-flex;align-items:center;gap:7px;background:var(--cream);border:1px solid var(--line);border-radius:var(--r-pill);padding:8px 15px;font-size:13px;font-weight:500;color:var(--grey)}
+.chip svg{width:14px;height:14px;color:var(--sage)}
+.map-card iframe{width:100%;height:340px;border:0;display:block}
+.addr{padding:28px 30px 30px}
+.addr h3{font-size:23px;margin-bottom:7px}
+.addr .a{font-size:15.5px;margin-bottom:5px}
+.addr .tel{font-size:15px;margin-bottom:22px}
+.addr .tel a{color:var(--sage-dark);font-weight:600}
+.addr .tel a:hover{text-decoration:underline}
+.addr-act{display:flex;gap:12px;flex-wrap:wrap}
+
+/* ════════════════════════════════════════════════════════
+   11. CTA
+   ════════════════════════════════════════════════════════ */
+.cta{background:var(--forest);color:#e8edd8;padding:104px 0;text-align:center;position:relative;overflow:hidden}
+.cta::before{content:"";position:absolute;inset:0;background:radial-gradient(80% 60% at 50% 0%,rgba(97,128,71,.28),transparent 60%),radial-gradient(60% 50% at 50% 100%,rgba(200,154,94,.2),transparent 60%);pointer-events:none}
+.cta .wrap{position:relative;z-index:2}
+.cta h2{color:#fff;font-size:clamp(2.4rem,6vw,4.2rem);margin-bottom:20px;letter-spacing:-.02em}
+.cta h2 em{color:var(--gold-light);font-weight:500}
+.cta p{max-width:540px;margin:0 auto 40px;font-size:17px;color:rgba(232,237,216,.82)}
+.cta-btns{display:flex;gap:15px;justify-content:center;flex-wrap:wrap;margin-bottom:38px}
+.cta-social{display:flex;justify-content:center;gap:12px;margin-bottom:44px}
+.sbtn{width:50px;height:50px;border-radius:50%;border:1.5px solid rgba(255,255,255,.28);display:grid;place-items:center;color:#e8edd8;transition:all var(--spd)}
+.sbtn:hover{background:var(--gold);border-color:var(--gold);color:#3a2c15;transform:translateY(-4px)}
+.sbtn svg{width:20px;height:20px}
+.perks{display:flex;justify-content:center;gap:30px;flex-wrap:wrap;font-size:14px;font-weight:500;color:rgba(232,237,216,.85)}
+.perks span{display:inline-flex;align-items:center;gap:8px}
+.perks svg{width:16px;height:16px;color:var(--gold-light)}
+
+/* ════════════════════════════════════════════════════════
+   12. FOOTER + FLOATERS
+   ════════════════════════════════════════════════════════ */
+footer{background:#202b18;color:rgba(232,237,216,.72)}
+.foot-grid{display:grid;grid-template-columns:2.1fr 1fr 1.3fr;gap:56px;padding:78px 0 50px}
+.foot-grid .brand{color:#fff;margin-bottom:16px}
+.foot-blurb{font-size:14.5px;max-width:320px;line-height:1.7}
+.foot-social{display:flex;gap:10px;margin-top:22px}
+.foot-social .sbtn{width:42px;height:42px}
+footer h4{color:#fff;font-family:var(--font-sans);font-size:13px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;margin-bottom:20px}
+.flinks a{display:block;padding:6px 0;font-size:14.5px;transition:color var(--spd)}
+.flinks a:hover{color:var(--gold-light)}
+.fvisit li{display:flex;gap:12px;padding:7px 0;font-size:14.5px;align-items:flex-start;line-height:1.55}
+.fvisit svg{width:16px;height:16px;flex:none;margin-top:4px;color:var(--gold-light)}
+.fvisit a:hover{color:var(--gold-light)}
+.copy{border-top:1px solid rgba(255,255,255,.09);padding:22px 0;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:13px;color:rgba(232,237,216,.5)}
+
+.fabs{position:fixed;right:22px;bottom:22px;z-index:90;display:flex;flex-direction:column;gap:11px;opacity:0;transform:translateY(18px);pointer-events:none;transition:opacity .4s var(--ease),transform .4s var(--ease)}
+.fabs.show{opacity:1;transform:none;pointer-events:auto}
+.fab{width:55px;height:55px;border-radius:50%;display:grid;place-items:center;color:#fff;box-shadow:var(--sh);transition:transform var(--spd) var(--ease),box-shadow var(--spd)}
+.fab:hover{transform:translateY(-4px) scale(1.06);box-shadow:var(--sh-lg)}
+.fab svg{width:22px;height:22px}
+.fab-call{background:var(--sage)}
+.fab-order{background:var(--gold);color:#3a2c15}
+#top-btn{position:fixed;left:22px;bottom:22px;z-index:90;width:47px;height:47px;border-radius:50%;background:var(--white);color:var(--ink);border:1px solid var(--line);display:grid;place-items:center;box-shadow:var(--sh-sm);opacity:0;transform:translateY(18px);pointer-events:none;transition:all .4s var(--ease)}
+#top-btn.show{opacity:1;transform:none;pointer-events:auto}
+#top-btn:hover{background:var(--sage);color:#fff;border-color:var(--sage)}
+#top-btn svg{width:19px;height:19px}
+
+.mobile-cta{display:none}
+.mobile-cta a{display:flex;align-items:center;justify-content:center;gap:8px;flex:1;padding:14px 10px;border-radius:12px;font-weight:700;font-size:14.5px;text-decoration:none;transition:transform .15s var(--ease)}
+.mobile-cta a:active{transform:scale(.96)}
+.mobile-cta svg{width:19px;height:19px;flex:none}
+.mcta-call{background:var(--sage);color:#fff}
+.mcta-dir{background:var(--ink);color:var(--cream)}
+
+/* Reveal */
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .55s var(--ease),transform .55s var(--ease)}
+.reveal.in{opacity:1;transform:none}
+.d1{transition-delay:.06s}.d2{transition-delay:.12s}.d3{transition-delay:.18s}.d4{transition-delay:.24s}.d5{transition-delay:.3s}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+  html{scroll-behavior:auto}
+  .reveal,.hero-copy>*,.hero-visual,.hero h1 .word{opacity:1!important;transform:none!important}
+  .mq-track,.rev-track{animation:none!important}
+}
+
+/* ════════════════════════════════════════════════════════
+   RESPONSIVE
+   ════════════════════════════════════════════════════════ */
+@media (max-width:1080px){
+  .hero-in{grid-template-columns:1fr;gap:20px;padding:36px 0 70px;min-height:auto}
+  .hero-visual{height:min(60vh,480px);max-width:520px;margin-top:12px}
+  .bento-grid{grid-template-columns:repeat(2,1fr);grid-auto-rows:180px}
+  .t-wide{grid-column:span 2}
+  .story-grid{grid-template-columns:1fr;gap:54px}
+  .story-photo img{height:440px}
+  .visit-grid{grid-template-columns:1fr}
+  .menu-layout{grid-template-columns:1fr;gap:36px}
+  .menu-side{position:static}
+  .menu-tabs{flex-direction:row;flex-wrap:wrap}
+  .mtab{flex:1 1 auto;justify-content:center;text-align:center}
+  .mtab svg{display:none}
+}
+@media (max-width:800px){
+  .nav-links,.nav-act{display:none}
+  .burger{display:flex}
+  body{padding-bottom:calc(66px + env(safe-area-inset-bottom))}
+  .fabs,#top-btn{display:none}
+  .mobile-cta{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:95;gap:10px;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(247,248,244,.94);backdrop-filter:blur(18px) saturate(140%);-webkit-backdrop-filter:blur(18px) saturate(140%);box-shadow:0 -8px 30px rgba(33,40,20,.14);border-top:1px solid var(--line)}
+  .announce{font-size:11.5px;padding:8px 14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .stats-card{grid-template-columns:1fr 1fr}
+  .stat{padding:26px 16px}
+  .stat:nth-child(3)::before{display:none}
+  .stat:nth-child(3),.stat:nth-child(4){border-top:1px solid rgba(255,255,255,.12)}
+  .fav-grid{grid-template-columns:1fr 1fr}
+  .foot-grid{grid-template-columns:1fr 1fr;gap:38px}
+  .menu-tabs{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+  .mtab{padding:13px 14px;font-size:14px}
+}
+@media (max-width:620px){
+  .wrap{width:min(1240px,100% - 34px)}
+  html{scroll-padding-top:calc(var(--nav-h) + 8px)}
+  .hero-in{padding:26px 0 56px}
+  .hero h1{font-size:clamp(2.4rem,10.5vw,3.4rem);margin:16px 0 16px}
+  .hero .lead{font-size:1.02rem}
+  .hero-cta,.hero-trust{margin-top:24px}
+  .hero-visual{height:min(52vh,400px)}
+  .float-rating{left:-8px;top:14px;padding:11px 14px;gap:10px}
+  .float-rating .score{font-size:25px}
+  .float-pill{right:-6px;bottom:18px;padding:11px 15px;font-size:12.5px}
+  .float-mini{display:none}
+  .stats{margin-top:-30px}
+  .marquee{margin-top:44px;padding:13px 0}
+  .mq-h span{font-size:17px;padding:0 18px}
+  .head{margin-bottom:36px}
+  .head h2{font-size:clamp(2rem,8.4vw,2.7rem);margin:16px 0 12px}
+  .bento-grid{grid-template-columns:1fr;grid-auto-rows:minmax(190px,auto)}
+  .t-wide,.t-quote{grid-column:span 1}
+  .t-quote{padding:26px}
+  .t-stat{padding:22px}
+  .fav-grid{grid-template-columns:1fr;gap:20px}
+  .card-media img{height:250px}
+  .card-body{padding:22px 22px 24px}
+  .rev-card{width:290px;padding:24px 22px 20px}
+  .rev-badge{padding:16px 22px;gap:14px}
+  .rev-badge .big{font-size:40px}
+  .menu-side .mimg{height:200px}
+  .mpanel h3{font-size:26px}
+  .mrow{padding:15px 0}
+  .mrow .mi h4{font-size:16.5px}
+  .mrow .mp{font-size:17px}
+  .story-photo img{height:340px}
+  .story-copy p{font-size:15.5px}
+  .hours-card{padding:28px 22px 26px}
+  .addr{padding:22px 22px 24px}
+  .map-card iframe{height:260px}
+  .foot-grid{grid-template-columns:1fr;gap:34px;padding:56px 0 36px}
+  .copy{justify-content:center;text-align:center}
+  .hero-cta .btn,.cta-btns .btn{flex:1;min-width:150px;padding:15px 22px}
+  .addr-act .btn{flex:1;justify-content:center}
+  .story-photo .since{width:96px;height:96px;right:14px;bottom:-18px}
+  .story-photo .since b{font-size:27px}
+  .bento,.fav,.reviews,.menu,.story,.visit{padding-top:64px;padding-bottom:64px}
+  .cta{padding:76px 0}
+  .cta p{font-size:15.5px;margin-bottom:30px}
+  .perks{gap:14px 20px;font-size:13px}
+  .fabs{right:14px;bottom:14px;gap:9px}
+  .fab{width:50px;height:50px}
+  #top-btn{left:14px;bottom:14px;width:42px;height:42px}
+}
+</style>
+</head>
+<body>
+
+<div class="grain" aria-hidden="true"></div>
+<div class="progress" id="progress" aria-hidden="true"></div>
+<a class="skip-link" href="#bento">Skip to main content</a>
+
+<!-- ANNOUNCEMENT -->
+<div class="announce"><span id="announceText">Locally owned coffee shop on Colby Ave, Everett · Open Mon–Sat</span></div>
+
+<!-- NAV -->
+<nav id="nav" aria-label="Main navigation">
+  <div class="nav-in wrap">
+    <a href="#hero" class="brand" aria-label="Sobar Coffee home">
+      <span class="mark"><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M13.5 27v12.5h9" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="square"/><path d="M41.5 24.5h9V37" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="square"/><text x="32" y="37" text-anchor="middle" font-family="Inter,system-ui,sans-serif" font-size="12.5" font-weight="700" letter-spacing="-0.3" fill="currentColor">sobar</text></svg></span>
+      <span class="bt"><span class="wm">sobar</span><small>Coffee · Everett</small></span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#bento">Sobar</a></li>
+      <li><a href="#favorites">Favorites</a></li>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#story">Story</a></li>
+      <li><a href="#visit">Visit</a></li>
+    </ul>
+    <div class="nav-act">
+      <a class="nav-call" href="tel:+14254703520">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Call
+      </a>
+      <!-- EDIT: your exact order.online link -->
+      <a class="btn btn-primary btn-sm" href="https://order.online/business/~14298929/" target="_blank" rel="noopener">Order Online</a>
+    </div>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<div class="mobile" id="mobile" aria-hidden="true">
+  <button class="mm-x" id="mmX" aria-label="Close menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+  <a class="ml" href="#bento">Sobar</a>
+  <a class="ml" href="#favorites">Favorites</a>
+  <a class="ml" href="#menu">Menu</a>
+  <a class="ml" href="#story">Our Story</a>
+  <a class="ml" href="#visit">Visit Us</a>
+  <div class="mm-act">
+    <a class="btn btn-ghost btn-sm" href="tel:+14254703520">Call (425) 470-3520</a>
+    <!-- EDIT: your exact order.online link -->
+    <a class="btn btn-gold btn-sm" href="https://order.online/business/~14298929/" target="_blank" rel="noopener">Order Online</a>
+  </div>
+</div>
+
+<!-- HERO -->
+<header class="hero" id="hero">
+  <div class="wrap hero-in">
+    <div class="hero-copy">
+      <span class="eyebrow">Your everyday coffee stop · Everett</span>
+      <h1><span class="word">Everett</span> <span class="word">runs</span> <span class="word">on</span> <em class="word">good</em> <span class="word">coffee.</span></h1>
+      <p class="lead">Clean coffee, signature drinks, and curated treats at 2820 Colby Ave. A bright, plant-filled room and a counter that learns your name fast.</p>
+      <div class="hero-cta">
+        <!-- EDIT: your exact order.online link -->
+        <a class="btn btn-primary" href="https://order.online/business/~14298929/" target="_blank" rel="noopener">Order Online
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+        <a class="btn btn-outline" href="#menu">See the Menu</a>
+      </div>
+      <div class="hero-trust">
+        <div class="avatars" aria-hidden="true"><span>JM</span><span>MT</span><span>PS</span><span>DR</span></div>
+        <div class="tx"><b>Loved by the neighborhood</b><br><span class="gold">★★★★★</span> <span>4.6 from 77+ Google reviews</span></div>
+      </div>
+    </div>
+    <div class="hero-visual" id="heroVisual">
+      <span class="hv-blob b1" data-depth="0.5" aria-hidden="true"></span>
+      <span class="hv-blob b2" data-depth="0.3" aria-hidden="true"></span>
+      <div class="hv-main">
+        <img src="images/hero.jpg" alt="Three signature drinks at Sobar Coffee: iced matcha, fruit refresher, and iced mocha" fetchpriority="high"
+             onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&w=1100&q=80'">
+      </div>
+      <div class="float float-rating" data-depth="1.6">
+        <span class="score">4.6</span>
+        <div class="rmeta"><span class="gs">★★★★★</span><small>77+ Google reviews</small></div>
+      </div>
+      <div class="float float-pill" id="heroPill" data-depth="2.1"><span class="dot" aria-hidden="true"></span><span id="heroPillText">Open Now · Everett</span></div>
+      <div class="float float-mini" data-depth="1.1" aria-hidden="true">
+        <img src="images/hero-2.jpg" alt=""
+             onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1521017432531-fbd92d768814?auto=format&fit=crop&w=400&q=80'">
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- STATS -->
+<div class="wrap stats">
+  <div class="stats-card reveal" role="list" aria-label="Sobar Coffee at a glance">
+    <div class="stat" role="listitem"><div class="n" data-count="4.6" data-dec="1">4.6</div><div class="l">Google Rating</div></div>
+    <div class="stat" role="listitem"><div class="n" data-count="77" data-suffix="+">77+</div><div class="l">Neighbor Reviews</div></div>
+    <div class="stat" role="listitem"><div class="n" data-count="6">6</div><div class="l">Days Open a Week</div></div>
+    <div class="stat" role="listitem"><div class="n">$1–10</div><div class="l">Easy on the Wallet</div></div>
+  </div>
+</div>
+
+<!-- MARQUEE -->
+<div class="marquee" aria-hidden="true">
+  <div class="mq-track" id="mqTrack">
+    <div class="mq-h">
+      <span>Clean coffee</span><span class="s">✦</span><span>Signature drinks</span><span class="s">✦</span><span>Curated treats</span><span class="s">✦</span><span>2820 Colby Ave</span><span class="s">✦</span><span>Dine-in · Takeout · Delivery</span><span class="s">✦</span><span>Open Mon–Sat</span><span class="s">✦</span>
+    </div>
+  </div>
+</div>
+
+<!-- BENTO -->
+<section class="bento" id="bento">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="eyebrow">A morning at Sobar</span>
+      <h2>Less a coffee run. <em>More</em> a habit you look forward to.</h2>
+      <p>Big windows, good light, and a counter full of people who will learn your name embarrassingly fast.</p>
+    </div>
+    <div class="bento-grid reveal d1">
+      <div class="tile img t-wide">
+        <img src="images/ig-04.jpg" alt="Inside Sobar Coffee: the plant shelf and 'we have plants' chalkboard in the cozy corner" loading="lazy"
+             onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=1200&q=80'">
+        <span class="cap">The corner on Colby Ave</span>
+      </div>
+      <div class="tile t-stat"><div class="big">4.6★</div><div class="sm">Rated by 77+ of your neighbors on Google</div></div>
+      <div class="tile img t-tall">
+        <img src="images/bento-3.jpg" alt="Almond croissant and a latte at Sobar Coffee" loading="lazy"
+             onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=700&q=80'">
+        <span class="cap">Curated treats, daily</span>
+      </div>
+      <div class="tile img">
+        <img src="images/bento-2.jpg" alt="A latte on the blue patio tables outside Sobar Coffee" loading="lazy"
+             onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?auto=format&fit=crop&w=700&q=80'">
+        <span class="cap">Sunny days out front</span>
+      </div>
+      <div class="tile t-quote">
+        <p class="q">"A coffee shop should feel like someone's living room. Ours just happens to have a very good espresso machine."</p>
+        <span class="qby">— The Sobar team</span>
+      </div>
+      <div class="tile img">
+        <img src="images/bento-4.jpg" alt="Welcome, we are open chalkboard on the sidewalk outside Sobar Coffee" loading="lazy"
+             onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=700&q=80'">
+        <span class="cap">Come say hi</span>
+      </div>
+      <div class="tile t-stat t-sage">
+        <div class="big">7 AM</div>
+        <div class="sm">Doors open Mon–Fri. Beat the line, order ahead.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAVORITES -->
+<section class="fav" id="favorites">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="eyebrow">Customer Favorites</span>
+      <h2>What the regulars <em>actually</em> order</h2>
+      <p>Straight from the Google reviews: the matcha, the chai, and whatever came out of the pastry box that morning.</p>
+    </div>
+    <div class="fav-grid">
+      <article class="card hot reveal">
+        <div class="card-media">
+          <img src="images/ig-00.jpg" alt="Iced matcha latte with the other signature drinks at Sobar" loading="lazy"
+               onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=800&q=80'">
+          <span class="tag">Most Loved</span>
+        </div>
+        <div class="card-body">
+          <h3>Iced Matcha Latte</h3>
+          <p>The one the reviews can't stop talking about. Smooth, creamy, and perfectly balanced. Regulars add vanilla and strawberry.</p>
+          <div class="card-foot"><span class="price">$6.00</span><span class="stars-i" aria-label="Rated 5 out of 5">★★★★★ <b>5.0</b></span></div>
+        </div>
+      </article>
+      <article class="card reveal d1">
+        <div class="card-media">
+          <img src="images/iced.jpg" alt="Iced latte and a croissant on the blue chairs outside Sobar" loading="lazy"
+               onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1578314675249-a6910f80cc4e?auto=format&fit=crop&w=800&q=80'">
+          <span class="tag">Perfect Pair</span>
+        </div>
+        <div class="card-body">
+          <h3>Iced Latte &amp; the Pastry Box</h3>
+          <p>An iced latte out front on the blue chairs, plus a chocolate croissant or almond pinwheel. Go early, the box empties fast.</p>
+          <div class="card-foot"><span class="price">$5.50</span><span class="stars-i" aria-label="Rated 4.8 out of 5">★★★★★ <b>4.8</b></span></div>
+        </div>
+      </article>
+      <article class="card reveal d2">
+        <div class="card-media">
+          <img src="images/latte.jpg" alt="Vanilla chai latte on the marble table at Sobar" loading="lazy"
+               onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1534778101976-62847782c213?auto=format&fit=crop&w=800&q=80'">
+          <span class="tag">Regulars' Pick</span>
+        </div>
+        <div class="card-body">
+          <h3>Vanilla Chai Latte</h3>
+          <p>"Chef's kiss," according to the reviews. Warm spice, real vanilla, and your choice of milk. Great hot or iced.</p>
+          <div class="card-foot"><span class="price">$5.75</span><span class="stars-i" aria-label="Rated 4.9 out of 5">★★★★★ <b>4.9</b></span></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews" id="reviews">
+  <div class="wrap">
+    <div class="rev-top reveal">
+      <div class="head" style="margin-bottom:0">
+        <span class="eyebrow">Reviews</span>
+        <h2>Kind words from the <em>neighborhood</em></h2>
+      </div>
+      <div class="rev-badge">
+        <span class="big">4.6</span>
+        <div><span class="stars" style="--fill:92%" role="img" aria-label="4.6 out of 5 stars"><span aria-hidden="true">★★★★★</span><span class="fill" aria-hidden="true">★★★★★</span></span><small>From 77 Google reviews</small></div>
+      </div>
+    </div>
+  </div>
+  <div class="rev-mask">
+    <div class="rev-track" id="revTrack">
+      <div class="rev-row" id="revRow">
+        <article class="rev-card"><span class="stars-i" aria-label="5 stars">★★★★★</span><blockquote>"The vanilla chai latte is chef's kiss and if you have an addictive personality, stay out of the pastry box. If you're walking down Colby and need a coffee or snack, this is your spot!"</blockquote><div class="reviewer"><span class="av" style="background:var(--sage)">C</span><div class="who"><b>Colin</b><span>Google review</span></div></div></article>
+        <article class="rev-card"><span class="stars-i" aria-label="5 stars">★★★★★</span><blockquote>"The MATCHA is AMAZING!!! The vibe is great to just sit and journal. The person who helped us was so sweet!! 10/10"</blockquote><div class="reviewer"><span class="av" style="background:var(--gold)">LH</span><div class="who"><b>Lydia H.</b><span>Google review</span></div></div></article>
+        <article class="rev-card"><span class="stars-i" aria-label="5 stars">★★★★★</span><blockquote>"The matcha was incredible. Smooth, rich, and perfectly balanced. Great atmosphere and friendly service too. Will definitely be coming back!"</blockquote><div class="reviewer"><span class="av" style="background:var(--clay)">ES</span><div class="who"><b>Erica S.</b><span>Google review</span></div></div></article>
+        <article class="rev-card"><span class="stars-i" aria-label="5 stars">★★★★★</span><blockquote>"This is a wonderful place. The staff were helpful, the facilities were clean, plenty of comfortable seating, cute gifts, great food and drink, fun games to play at the table."</blockquote><div class="reviewer"><span class="av" style="background:var(--sage-dark)">DR</span><div class="who"><b>Donna R.</b><span>Google review</span></div></div></article>
+        <article class="rev-card"><span class="stars-i" aria-label="5 stars">★★★★★</span><blockquote>"Warm and bright decor. Open and comfy seating for a group or couple. We were met with a friendly greeting and my coffee was done very well. Definitely be back again."</blockquote><div class="reviewer"><span class="av" style="background:var(--gold)">DK</span><div class="who"><b>Denise K.</b><span>Google review</span></div></div></article>
+        <article class="rev-card"><span class="stars-i" aria-label="5 stars">★★★★★</span><blockquote>"Atmosphere is calming and the shop is deceptively spacious! Juliette is by far my favorite barista!"</blockquote><div class="reviewer"><span class="av" style="background:var(--sage)">JM</span><div class="who"><b>Jennifer M.</b><span>Google review</span></div></div></article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MENU -->
+<section class="menu" id="menu">
+  <div class="menu-doodles" aria-hidden="true">
+    <svg class="dood dc1" viewBox="0 0 80 96"><path d="M14 42h44v16a18 18 0 0 1-18 18h-8a18 18 0 0 1-18-18z"/><path d="M58 50h8a10 10 0 0 1 0 20h-5"/><path d="M10 42h62"/><path d="M25 38C20 32 29 27 24 20 19 13 28 8 25 3M40 38C34 31 46 24 39 16 33 8 45 3 41 2M53 38C48 32 57 27 52 20 47 13 56 9 53 4"/></svg>
+    <svg class="dood dc2" viewBox="0 0 80 56"><g transform="translate(26 22) rotate(-20)"><path d="M-17 0C-10-11 10-11 17 0 10 11-10 11-17 0Z"/><path d="M0-9C-4-3 4 3 0 9"/></g><g transform="translate(52 36) rotate(-20)"><path d="M-17 0C-10-11 10-11 17 0 10 11-10 11-17 0Z"/><path d="M0-9C-4-3 4 3 0 9"/></g></svg>
+    <svg class="dood dc3" viewBox="0 0 84 56"><path d="M10 40C16 10 68 10 74 40 60 26 24 26 10 40Z"/><path d="M24 28C28 18 34 14 40 13M34 29C38 20 44 16 50 15M46 29C49 21 54 17 58 16"/></svg>
+    <svg class="dood dc4" viewBox="0 0 70 90"><path d="M35 86C34 64 35 40 35 8"/><path d="M35 48C22 46 13 36 12 20 24 24 33 32 35 48Z"/><path d="M33 44C26 38 18 28 14 22"/><path d="M35 64C48 62 57 50 58 34 46 40 36 48 35 64Z"/><path d="M37 60C44 54 52 44 56 36"/></svg>
+    <svg class="dood dc5" viewBox="0 0 62 86"><path d="M15 10h32l3 10H12z"/><path d="M25 10C25 4 37 4 37 10"/><path d="M12 20 18 72a6 6 0 0 0 6 6h14a6 6 0 0 0 6-6l6-52Z"/><path d="M15 42h32M14 56h32"/></svg>
+    <svg class="dood dc6" viewBox="0 0 32 32"><path d="M16 2C17 12 20 15 30 16 20 17 17 20 16 30 15 20 12 17 2 16 12 15 15 12 16 2Z"/></svg>
+    <svg class="dood dc7" viewBox="0 0 32 32"><path d="M16 2C17 12 20 15 30 16 20 17 17 20 16 30 15 20 12 17 2 16 12 15 15 12 16 2Z"/></svg>
+    <svg class="dood dc8" viewBox="0 0 44 40"><path d="M22 35C7 25 4 15 4 9 4 3 9 1 14 3 18 4 21 7 22 12 23 7 26 4 30 3 35 1 40 3 40 9 40 15 37 25 22 35Z"/></svg>
+    <svg class="dood dc9" viewBox="0 0 40 90"><path d="M20 86C13 78 27 72 18 64 10 56 26 50 17 42 9 35 25 28 17 20 11 14 22 10 19 4"/></svg>
+  </div>
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="eyebrow">The Menu</span>
+      <h2>Pick your <em>usual</em></h2>
+      <p>Everything is made to order. Oat, almond, and coconut milk work in any drink.</p>
+    </div>
+    <div class="menu-layout">
+      <aside class="menu-side reveal">
+        <div class="mimg">
+          <img src="images/menu.jpg" alt="Honey cake and a cortado by the window at Sobar Coffee" loading="lazy"
+               onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=800&q=80'">
+          <div class="badge-round"><small>Made</small><b>Fresh</b></div>
+        </div>
+        <div class="menu-tabs" role="tablist" aria-label="Menu categories">
+          <button class="mtab on" role="tab" aria-selected="true" data-panel="p-esp">Espresso <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></button>
+          <button class="mtab" role="tab" aria-selected="false" data-panel="p-lat">Lattes &amp; Specials <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></button>
+          <button class="mtab" role="tab" aria-selected="false" data-panel="p-cold">Cold &amp; Iced <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></button>
+          <button class="mtab" role="tab" aria-selected="false" data-panel="p-tea">Tea &amp; More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></button>
+          <button class="mtab" role="tab" aria-selected="false" data-panel="p-bite">Bites <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></button>
+        </div>
+        <p class="milk"><b>Milk options:</b> whole, 2%, oat, almond, and coconut. Add an extra shot to anything for $1.</p>
+      </aside>
+
+      <!-- EDIT: items + prices are placeholders in your $1-10 range -->
+      <div class="menu-panels reveal d1">
+        <div class="mpanel on" id="p-esp" role="tabpanel">
+          <h3>Espresso</h3><p class="psub">Double shots as standard, pulled on the machine we're slightly too proud of.</p>
+          <div class="mrow"><div class="mi"><h4>Espresso</h4><p>Straight up, double shot</p></div><span class="dots" aria-hidden="true"></span><span class="mp">$3.25</span></div>
+          <div class="mrow"><div class="mi"><h4>Americano</h4><p>Espresso and hot water, simple and honest</p></div><span class="dots" aria-hidden="true"></span><span class="mp">$3.75</span></div>
+          <div class="mrow"><div class="mi"><h4>Cortado</h4><p>Equal parts espresso and steamed milk</p></div><span class="dots" aria-hidden="true"></span><span class="mp">$4.25</span></div>
+          <div class="mrow"><div class="mi"><h4>Cappuccino</h4><p>Classic ratio, proper foam</p></div><span class="dots" aria-hidden="true"></span><span class="mp">$4.75</span></div>
+          <div class="mrow"><div class="mi"><h4>Flat White</h4><p>Velvety milk, extra ristretto shot</p></div><span class="dots" aria-hidden="true"></span><span class="mp">$5.00</span></div>
+          <div class="mrow"><div class="mi"><h4>Mocha</h4><p>Real chocolate, not powder</p></div><span class="dots" aria-hidden="true"></span><span class="mp">$5.75</span></div>
+        </div>
+        <div class="mpanel" id="p-lat" role="tabpanel">
+          <h3>Lattes &amp; Specials</h3><p class="psub">All syrups made in small batches behind the counter.</p>
+          <div class="mrow"><div class="mi"><h4>Classic Latte</h4><p>Double shot, steamed milk, done right</p></div><span class="dots" aria-hidden="true"></span><span class="mp">$5.25</span></div>
+          <div class="mrow"><div class="mi"><h4>Vanilla Bean Latte</h4><p>Made with real vanilla bean syrup</p></div><span class="dots" aria-hidden="true"></span><span class="mp">$5.75</span></div>
+          <div class="mrow"><div class="mi"><h4>Caramel Latte</h4><p>House caramel, a little salt</p></div><span class="dots" aria-hidden="true"></span><span class="mp">$5.75</span></div>
+          <div class="mrow"><div class="mi"><h4>Vanilla Chai Latte</h4><p>The regulars' pick, hot or iced</p></div><span class="dots" aria-hidden="true"></span><span class="mp">$5.75</span></div>
+          <div class="mrow"><div class="mi"><h4>Brown Sugar Cinnamon Latte</h4><p>Cozy in a cup</p></div><span class="dots" aria-hidden="true"></span><span class="mp">$6.00</span></div>
+        </div>
+        <div class="mpanel" id="p-cold" role="tabpanel">
+          <h3>Cold &amp; Iced</h3><p class="psub">For the nine days of Everett summer and every other day too.</p>
+          <div class="mrow"><div class="mi"><h4>Cold Brew</h4><p>Steeped 18 hours, smooth and strong</p></div><span class="dots" aria-hidden="true"></span><span class="mp">$4.75</span></div>
+          <div class="mrow"><div class="mi"><h4>Iced Latte</h4><p>Any syrup, any milk</p></div><span class="dots" aria-hidden="true"></span><span class="mp">$5.50</span></div>
+          <div class="mrow"><div class="mi"><h4>Iced Shaken Espresso</h4><p>Brown sugar and cinnamon, shaken over ice</p></div><span class="dots" aria-hidden="true"></span><span class="mp">$6.50</span></div>
+          <div class="mrow"><div class="mi"><h4>Iced Chai Latte</h4><p>Spiced, creamy, refreshing</p></div><span class="dots" aria-hidden="true"></span><span class="mp">$5.50</span></div>
+          <div class="mrow"><div class="mi"><h4>Strawberry Matcha</h4><p>Layered, and yes, it photographs well</p></div><span class="dots" aria-hidden="true"></span><span class="mp">$6.50</span></div>
+          <div class="mrow"><div class="mi"><h4>Italian Soda</h4><p>Sparkling, any syrup, add cream if you like</p></div><span class="dots" aria-hidden="true"></span><span class="mp">$5.00</span></div>
+        </div>
+        <div class="mpanel" id="p-tea" role="tabpanel">
+          <h3>Tea &amp; More</h3><p class="psub">Not a coffee person? We still want to see you.</p>
+          <div class="mrow"><div class="mi"><h4>Matcha Latte</h4><p>Ceremonial grade, hot or iced</p></div><span class="dots" aria-hidden="true"></span><span class="mp">$5.75</span></div>
+          <div class="mrow"><div class="mi"><h4>Chai Latte</h4><p>Spiced black tea, steamed milk</p></div><span class="dots" aria-hidden="true"></span><span class="mp">$5.25</span></div>
+          <div class="mrow"><div class="mi"><h4>London Fog</h4><p>Earl Grey, vanilla, steamed milk</p></div><span class="dots" aria-hidden="true"></span><span class="mp">$5.25</span></div>
+          <div class="mrow"><div class="mi"><h4>Loose-Leaf Tea</h4><p>Rotating selection, ask what's on</p></div><span class="dots" aria-hidden="true"></span><span class="mp">$3.50</span></div>
+          <div class="mrow"><div class="mi"><h4>Hot Chocolate</h4><p>Real chocolate, whipped cream optional</p></div><span class="dots" aria-hidden="true"></span><span class="mp">$4.25</span></div>
+          <div class="mrow"><div class="mi"><h4>Steamer</h4><p>Steamed milk with any house syrup</p></div><span class="dots" aria-hidden="true"></span><span class="mp">$3.75</span></div>
+        </div>
+        <div class="mpanel" id="p-bite" role="tabpanel">
+          <h3>Bites</h3><p class="psub">The pastry case changes daily. Go early for the almond croissant.</p>
+          <div class="mrow"><div class="mi"><h4>Chocolate Croissant</h4><p>The one the reviews warn you about</p></div><span class="dots" aria-hidden="true"></span><span class="mp">$5.00</span></div>
+          <div class="mrow"><div class="mi"><h4>Almond Pinwheel</h4><p>Flaky, nutty, goes fast</p></div><span class="dots" aria-hidden="true"></span><span class="mp">$5.25</span></div>
+          <div class="mrow"><div class="mi"><h4>Cinnamon Roll</h4><p>Soft, gooey middle</p></div><span class="dots" aria-hidden="true"></span><span class="mp">$5.50</span></div>
+          <div class="mrow"><div class="mi"><h4>Butter Croissant</h4><p>Flaky, baked fresh</p></div><span class="dots" aria-hidden="true"></span><span class="mp">$4.25</span></div>
+          <div class="mrow"><div class="mi"><h4>Cranberry Almond Meal Bar</h4><p>The sturdy breakfast option</p></div><span class="dots" aria-hidden="true"></span><span class="mp">$4.50</span></div>
+          <div class="mrow"><div class="mi"><h4>Honey Cake</h4><p>Layered, with a proper coffee pairing</p></div><span class="dots" aria-hidden="true"></span><span class="mp">$5.75</span></div>
+        </div>
+        <div class="mfoot">
+          <p>Prices are typical and can shift with the seasons. The pastry case rotates daily, so call ahead if your heart is set on something.</p>
+          <a class="btn btn-outline" href="tel:+14254703520"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Call to Order</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STORY -->
+<section class="story" id="story">
+  <div class="wrap">
+    <div class="story-grid">
+      <div class="story-photo reveal">
+        <img src="images/story.jpg" alt="The sobar sign above the shop on Colby Avenue" loading="lazy"
+             onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1559925393-8be0ec4767c8?auto=format&fit=crop&w=1000&q=80'">
+        <!-- EDIT: real founding year here + paragraph below -->
+        <div class="since" aria-label="Serving Everett since 2023"><small>Since</small><b>2023</b></div>
+      </div>
+      <div class="story-copy reveal d1">
+        <span class="eyebrow">Our Story</span>
+        <h2 style="font-size:clamp(2.1rem,4.2vw,3rem);margin-top:16px;letter-spacing:-.02em">A small shop with a <em style="color:var(--sage)">soft</em> spot for Everett</h2>
+        <blockquote class="pull">"Downtown deserved a shop that takes its coffee seriously without taking itself too seriously."</blockquote>
+        <p>Sobar opened on Colby Avenue with one idea in mind. We make our syrups in small batches behind the counter, dial in the espresso every morning, and learn our regulars' names faster than they expect.</p>
+        <p>On any given day you'll find students at the big table, nurses coming off shift, and at least one person who swears they only came for the banana bread. Come as you are. We'll have the kettle on.</p>
+        <div class="values">
+          <div class="value"><span class="vi" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 8h1a4 4 0 1 1 0 8h-1"/><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"/><line x1="6" x2="6" y1="2" y2="4"/><line x1="10" x2="10" y1="2" y2="4"/><line x1="14" x2="14" y1="2" y2="4"/></svg></span><div><h4>Beans we stand behind</h4><p>Roasted in the Pacific Northwest and dialed in fresh every morning.</p></div></div>
+          <div class="value"><span class="vi" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg></span><div><h4>Neighbors first</h4><p>Locally owned and staffed by people who live here too.</p></div></div>
+          <div class="value"><span class="vi" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4"/><path d="m6.4 6.4 2.8 2.8"/><path d="M2 12h4"/><path d="m6.4 17.6 2.8-2.8"/><circle cx="12" cy="12" r="2"/><path d="M12 18v4"/><path d="m17.6 17.6-2.8-2.8"/><path d="M22 12h-4"/><path d="m17.6 6.4-2.8 2.8"/></svg></span><div><h4>Made to order</h4><p>House syrups and real ingredients, even where nobody would notice.</p></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VISIT -->
+<section class="visit" id="visit">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="eyebrow">Visit Us</span>
+      <h2>Find us on <em>Colby</em> Avenue</h2>
+      <p>Two blocks of easy parking, one very good reason to stop.</p>
+    </div>
+    <div class="visit-grid">
+      <div class="hours-card reveal">
+        <div class="hours-head"><h3>Hours</h3><span class="obadge" id="hBadge"><span class="dot" aria-hidden="true"></span><span id="hBadgeText">Open Now</span></span></div>
+        <p class="hmsg" id="hMsg"></p>
+        <ul class="hlist" id="hList">
+          <li data-day="1"><span class="d">Monday <span class="tflag">Today</span></span><span class="t">7:00 AM – 5:00 PM</span></li>
+          <li data-day="2"><span class="d">Tuesday <span class="tflag">Today</span></span><span class="t">7:00 AM – 5:00 PM</span></li>
+          <li data-day="3"><span class="d">Wednesday <span class="tflag">Today</span></span><span class="t">7:00 AM – 5:00 PM</span></li>
+          <li data-day="4"><span class="d">Thursday <span class="tflag">Today</span></span><span class="t">7:00 AM – 5:00 PM</span></li>
+          <li data-day="5"><span class="d">Friday <span class="tflag">Today</span></span><span class="t">7:00 AM – 5:00 PM</span></li>
+          <li data-day="6"><span class="d">Saturday <span class="tflag">Today</span></span><span class="t">10:00 AM – 5:00 PM</span></li>
+          <li data-day="0" class="off"><span class="d">Sunday <span class="tflag">Today</span></span><span class="t">Closed</span></li>
+        </ul>
+        <div class="amen" aria-label="Amenities">
+          <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Dine-In</span>
+          <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Takeout</span>
+          <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Delivery</span>
+          <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Free Wi-Fi</span>
+          <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Street Parking</span>
+          <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Kid Friendly</span>
+        </div>
+      </div>
+      <div class="map-card reveal d1">
+        <iframe src="https://www.google.com/maps?q=Sobar%20Coffee%2C%202820%20Colby%20Ave%2C%20Everett%2C%20WA%2098201&amp;output=embed" title="Map showing Sobar Coffee at 2820 Colby Ave, Everett, WA" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+        <div class="addr">
+          <h3>Sobar Coffee</h3>
+          <p class="a">2820 Colby Ave, Everett, WA 98201</p>
+          <p class="tel"><a href="tel:+14254703520">(425) 470-3520</a></p>
+          <div class="addr-act">
+            <a class="btn btn-primary btn-sm" href="https://www.google.com/maps/dir/?api=1&amp;destination=Sobar+Coffee,+2820+Colby+Ave,+Everett,+WA+98201" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>Get Directions</a>
+            <a class="btn btn-outline btn-sm" href="tel:+14254703520"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Call Us</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <div class="wrap reveal">
+    <h2>See you at <em>Sobar</em>.</h2>
+    <p>We're pouring Monday through Saturday at 2820 Colby Ave. Order ahead if you're in a hurry, or come sit for a while if you're not.</p>
+    <div class="cta-btns">
+      <a class="btn btn-gold" href="https://www.google.com/maps/dir/?api=1&amp;destination=Sobar+Coffee,+2820+Colby+Ave,+Everett,+WA+98201" target="_blank" rel="noopener">Get Directions</a>
+      <a class="btn btn-ghost" href="tel:+14254703520">Call (425) 470-3520</a>
+    </div>
+    <div class="cta-social">
+      <a class="sbtn" href="https://www.instagram.com/sobar.coffee" target="_blank" rel="noopener" aria-label="Sobar Coffee on Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="20" x="2" y="2" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg></a>
+    </div>
+    <div class="perks">
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Free Wi-Fi</span>
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Order Ahead</span>
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Walk-Ins Welcome</span>
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Locally Owned</span>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a href="#hero" class="brand" aria-label="Sobar Coffee home">
+          <span class="mark"><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M13.5 27v12.5h9" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="square"/><path d="M41.5 24.5h9V37" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="square"/><text x="32" y="37" text-anchor="middle" font-family="Inter,system-ui,sans-serif" font-size="12.5" font-weight="700" letter-spacing="-0.3" fill="currentColor">sobar</text></svg></span>
+          <span class="bt"><span class="wm">sobar</span><small>Coffee · Everett</small></span>
+        </a>
+        <p class="foot-blurb">A locally owned coffee shop in downtown Everett, WA. Espresso and pastries from people who will learn your name faster than you expect.</p>
+        <div class="foot-social">
+          <a class="sbtn" href="https://www.instagram.com/sobar.coffee" target="_blank" rel="noopener" aria-label="Sobar Coffee on Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="20" x="2" y="2" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg></a>
+        </div>
+      </div>
+      <nav aria-label="Footer links">
+        <h4>Quick Links</h4>
+        <div class="flinks">
+          <a href="#bento">Sobar</a><a href="#favorites">Favorites</a><a href="#menu">Menu</a><a href="#story">Our Story</a><a href="#visit">Visit Us</a>
+        </div>
+      </nav>
+      <div>
+        <h4>Visit Us</h4>
+        <ul class="fvisit">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg><span>2820 Colby Ave<br>Everett, WA 98201</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg><a href="tel:+14254703520">(425) 470-3520</a></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg><span>Mon–Fri: 7 AM – 5 PM<br>Sat: 10 AM – 5 PM · Sun: Closed</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="copy"><span>© <span id="year">2026</span> Sobar Coffee. All rights reserved.</span><span>2820 Colby Ave, Everett, WA 98201</span></div>
+  </div>
+</footer>
+
+<!-- FLOATERS -->
+<div class="fabs" id="fabs">
+  <!-- EDIT: your exact order.online link -->
+  <a class="fab fab-order" href="https://order.online/business/~14298929/" target="_blank" rel="noopener" aria-label="Order online" title="Order Online"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg></a>
+  <a class="fab fab-call" href="tel:+14254703520" aria-label="Call Sobar Coffee" title="Call (425) 470-3520"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></a>
+</div>
+<button id="top-btn" aria-label="Back to top" title="Back to top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 7-7 7 7"/><path d="M12 19V5"/></svg></button>
+
+<!-- MOBILE/TABLET STICKY CTA BAR -->
+<nav class="mobile-cta" aria-label="Quick actions">
+  <a class="mcta-call" href="tel:+14254703520"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Call Now</a>
+  <a class="mcta-dir" href="https://www.google.com/maps/dir/?api=1&amp;destination=Sobar+Coffee,+2820+Colby+Ave,+Everett,+WA+98201" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>Directions</a>
+</nav>
+
+<script>
+(function () {
+  'use strict';
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* ── Opening hours (24h), indexed by getDay(); null = closed ── */
+  var HOURS = [ null, [7,17], [7,17], [7,17], [7,17], [7,17], [10,17] ];
+  var DAYS = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+
+  function fmt(h){
+    var hr = Math.floor(h), m = Math.round((h-hr)*60);
+    var suf = hr < 12 ? 'AM' : 'PM', d = hr % 12; if (d === 0) d = 12;
+    return d + (m ? ':'+String(m).padStart(2,'0') : '') + ' ' + suf;
+  }
+  function status(){
+    var now = new Date(), day = now.getDay(), t = now.getHours() + now.getMinutes()/60, today = HOURS[day];
+    if (today && t >= today[0] && t < today[1]) return { open:true, closesAt:today[1], soon:(today[1]-t)<=1, day:day };
+    for (var i=0;i<=7;i++){
+      var idx=(day+i)%7, h=HOURS[idx]; if(!h) continue; if(i===0 && t>=h[1]) continue;
+      var label = i===0 ? 'today' : i===1 ? 'tomorrow' : DAYS[idx];
+      return { open:false, next:label, opensAt:h[0], day:day };
+    }
+    return { open:false, next:'soon', opensAt:7, day:day };
+  }
+  function applyStatus(){
+    var s = status();
+    var a=document.getElementById('announceText'), pill=document.getElementById('heroPill'), pt=document.getElementById('heroPillText');
+    var b=document.getElementById('hBadge'), bt=document.getElementById('hBadgeText'), msg=document.getElementById('hMsg');
+    if (s.open){
+      var until = fmt(s.closesAt);
+      a.innerHTML = s.soon ? '<strong>Closing soon</strong> · Open until '+until+' today · 2820 Colby Ave, Everett'
+        : '<strong>We\'re open</strong> until '+until+' today · 2820 Colby Ave, Everett · Dine-in, takeout &amp; delivery';
+      pill.classList.remove('is-closed'); pt.textContent = (s.soon?'Closing Soon':'Open Now')+' · Everett';
+      b.classList.remove('closed'); bt.textContent = s.soon?'Closing Soon':'Open Now';
+      msg.textContent = 'Serving until '+until+' today.';
+    } else {
+      var opens = fmt(s.opensAt);
+      a.innerHTML = '<strong>Closed right now</strong> · We\'re back '+s.next+' at '+opens+' · 2820 Colby Ave, Everett';
+      pill.classList.add('is-closed'); pt.textContent = 'Closed · Opens '+s.next+' at '+opens;
+      b.classList.add('closed'); bt.textContent = 'Closed';
+      msg.textContent = 'Come back '+s.next+' at '+opens+'. We\'ll have the kettle on.';
+    }
+    document.querySelectorAll('#hList li').forEach(function(li){
+      li.classList.toggle('now', Number(li.getAttribute('data-day')) === s.day);
+    });
+  }
+  applyStatus(); setInterval(applyStatus, 60000);
+
+  /* ── Scroll: nav, progress, fabs, top ── */
+  var nav=document.getElementById('nav'), fabs=document.getElementById('fabs'), top=document.getElementById('top-btn'), prog=document.getElementById('progress');
+  function onScroll(){
+    var y = window.scrollY || window.pageYOffset;
+    nav.classList.toggle('scrolled', y > 40);
+    fabs.classList.toggle('show', y > 400);
+    top.classList.toggle('show', y > 600);
+    var h = document.documentElement.scrollHeight - window.innerHeight;
+    prog.style.width = (h > 0 ? (y/h*100) : 0) + '%';
+  }
+  window.addEventListener('scroll', onScroll, { passive:true }); onScroll();
+  top.addEventListener('click', function(){ window.scrollTo({ top:0, behavior:reduce?'auto':'smooth' }); });
+
+  /* ── Mobile menu ── */
+  var burger=document.getElementById('burger'), mob=document.getElementById('mobile'), mx=document.getElementById('mmX');
+  function setMenu(open){
+    mob.classList.toggle('open', open); mob.setAttribute('aria-hidden', String(!open));
+    burger.setAttribute('aria-expanded', String(open)); document.body.classList.toggle('lock', open);
+  }
+  burger.addEventListener('click', function(){ setMenu(!mob.classList.contains('open')); });
+  mx.addEventListener('click', function(){ setMenu(false); });
+  mob.querySelectorAll('a').forEach(function(l){ l.addEventListener('click', function(){ setMenu(false); }); });
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape') setMenu(false); });
+
+  /* ── Menu tabs ── */
+  var tabs=document.querySelectorAll('.mtab'), panels=document.querySelectorAll('.mpanel');
+  tabs.forEach(function(tab){
+    tab.addEventListener('click', function(){
+      tabs.forEach(function(t){ t.classList.remove('on'); t.setAttribute('aria-selected','false'); });
+      panels.forEach(function(p){ p.classList.remove('on'); });
+      tab.classList.add('on'); tab.setAttribute('aria-selected','true');
+      var p=document.getElementById(tab.getAttribute('data-panel')); if(p) p.classList.add('on');
+    });
+  });
+
+  /* ── Reveal on scroll ── */
+  if ('IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(es){
+      es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, { threshold:0.05, rootMargin:'0px 0px 120px 0px' });
+    document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+  } else {
+    document.querySelectorAll('.reveal').forEach(function(el){ el.classList.add('in'); });
+  }
+
+  /* ── Animated counters ── */
+  function runCounter(el){
+    var target = parseFloat(el.getAttribute('data-count'));
+    var dec = parseInt(el.getAttribute('data-dec') || '0', 10);
+    var suffix = el.getAttribute('data-suffix') || '';
+    var start = null, dur = 1400;
+    function step(ts){
+      if (start === null) start = ts;
+      var p = Math.min((ts-start)/dur, 1);
+      var eased = 1 - Math.pow(1-p, 3);
+      el.textContent = (target*eased).toFixed(dec) + suffix;
+      if (p < 1) requestAnimationFrame(step); else el.textContent = target.toFixed(dec) + suffix;
+    }
+    requestAnimationFrame(step);
+  }
+  var counters = document.querySelectorAll('.n[data-count]');
+  if ('IntersectionObserver' in window && !reduce){
+    var cio = new IntersectionObserver(function(es){
+      es.forEach(function(e){ if(e.isIntersecting){ runCounter(e.target); cio.unobserve(e.target); } });
+    }, { threshold:0.5 });
+    counters.forEach(function(c){ cio.observe(c); });
+  }
+
+  /* ── Seamless marquees (clone content) ── */
+  function loop(track, sel){
+    var first = track.querySelector(sel); if(!first) return;
+    var clone = first.cloneNode(true); clone.setAttribute('aria-hidden','true'); track.appendChild(clone);
+  }
+  loop(document.getElementById('mqTrack'), '.mq-h');
+  loop(document.getElementById('revTrack'), '.rev-row');
+
+  /* ── Hero mouse parallax ── */
+  if (!reduce && window.matchMedia('(pointer:fine)').matches){
+    var hv = document.getElementById('heroVisual');
+    var floats = hv ? hv.querySelectorAll('[data-depth]') : [];
+    hv && hv.addEventListener('mousemove', function(e){
+      var r = hv.getBoundingClientRect();
+      var dx = (e.clientX - r.left - r.width/2) / r.width;
+      var dy = (e.clientY - r.top - r.height/2) / r.height;
+      floats.forEach(function(f){
+        var d = parseFloat(f.getAttribute('data-depth'));
+        f.style.transform = 'translate('+(dx*d*14)+'px,'+(dy*d*14)+'px)';
+      });
+    });
+    hv && hv.addEventListener('mouseleave', function(){
+      floats.forEach(function(f){ f.style.transform=''; });
+    });
+  }
+
+  /* ── Magnetic buttons ── */
+  if (!reduce && window.matchMedia('(pointer:fine)').matches){
+    document.querySelectorAll('.btn-primary, .btn-gold').forEach(function(btn){
+      btn.addEventListener('mousemove', function(e){
+        var r = btn.getBoundingClientRect();
+        btn.style.transform = 'translate('+((e.clientX-r.left-r.width/2)*0.18)+'px,'+((e.clientY-r.top-r.height/2)*0.28-2)+'px)';
+      });
+      btn.addEventListener('mouseleave', function(){ btn.style.transform=''; });
+    });
+  }
+
+  document.getElementById('year').textContent = new Date().getFullYear();
+})();
+</script>
+</body>
+</html>
