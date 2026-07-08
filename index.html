@@ -26,7 +26,7 @@
   1. Order Online link — paste your exact order.online URL
   2. Founding year in the "Since" badge + story copy
   3. Review quotes — swap in real Google reviews
-  4. Menu items + prices — placeholders in your $1-10 range
+  4. Bites (pastry) prices — still placeholders, update from your case
   ══════════════════════════════════════════════════════════════════
 -->
 <meta charset="UTF-8">
@@ -378,8 +378,6 @@ section{position:relative}
 .mtab:hover{border-color:var(--sage);color:var(--sage-dark)}
 .mtab.on{background:var(--sage);border-color:var(--sage);color:#fff;box-shadow:var(--sh-sage)}
 .mtab.on svg{opacity:1;transform:none}
-.milk{margin-top:22px;background:var(--cream-2);border-radius:var(--r-sm);padding:16px 18px;font-size:13.5px;line-height:1.55}
-.milk b{color:var(--sage-dark)}
 .mpanel{display:none}
 .mpanel.on{display:block;animation:panelin .45s var(--ease)}
 @keyframes panelin{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
@@ -392,8 +390,23 @@ section{position:relative}
 .mrow .mi p{font-size:14px;color:var(--grey-soft);margin-top:3px}
 .mrow .dots{flex:1;border-bottom:2px dotted var(--line);transform:translateY(-5px);min-width:22px}
 .mrow .mp{font-family:var(--font-display);font-weight:600;font-size:19px;color:var(--sage-dark);font-variant-numeric:tabular-nums}
+.mprice-grid{display:grid;grid-template-columns:repeat(3,40px);gap:4px;text-align:right;flex:none}
+.mrow .mprice-grid{font-family:var(--font-display);font-weight:600;font-size:16.5px;color:var(--sage-dark);font-variant-numeric:tabular-nums}
+.mrow .mprice-grid .na{color:var(--line);font-weight:400}
+.mrow.msize-head{padding-top:0;padding-bottom:10px}
+.mrow.msize-head .mprice-grid{font-family:var(--font-sans);font-size:10.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--grey-soft)}
+.tea-flavors{margin-top:22px;padding-top:18px;border-top:1px dashed var(--line);font-size:13.5px;line-height:1.7;color:var(--grey-soft)}
+.tea-flavors b{color:var(--sage-dark);display:block;margin-bottom:4px;font-size:12px;text-transform:uppercase;letter-spacing:.05em}
 .mfoot{margin-top:34px;display:flex;align-items:center;gap:22px;flex-wrap:wrap}
 .mfoot p{font-size:13.5px;color:var(--grey-soft);flex:1;min-width:230px}
+.milk-details{margin-top:22px;background:var(--cream-2);border-radius:var(--r-sm);padding:16px 18px;font-size:13.5px;line-height:1.6}
+.milk-details summary{cursor:pointer;font-weight:600;color:var(--sage-dark);list-style:none;display:flex;justify-content:space-between;align-items:center;gap:8px}
+.milk-details summary::-webkit-details-marker{display:none}
+.milk-details summary::after{content:"+";font-weight:700;font-size:16px}
+.milk-details[open] summary::after{content:"\2013"}
+.milk-details .mdbody{margin-top:12px;padding-top:12px;border-top:1px dashed var(--line)}
+.milk-details .mdbody p{margin-bottom:9px}
+.milk-details b{color:var(--sage-dark)}
 
 /* ════════════════════════════════════════════════════════
    9. STORY
@@ -581,6 +594,9 @@ footer h4{color:#fff;font-family:var(--font-sans);font-size:13px;font-weight:700
   .mrow{padding:15px 0}
   .mrow .mi h4{font-size:16.5px}
   .mrow .mp{font-size:17px}
+  .mprice-grid{grid-template-columns:repeat(3,34px);gap:2px}
+  .mrow .mprice-grid{font-size:14.5px}
+  .mrow.msize-head .mprice-grid{font-size:9.5px}
   .story-photo img{height:340px}
   .story-copy p{font-size:15.5px}
   .hours-card{padding:28px 22px 26px}
@@ -853,51 +869,59 @@ footer h4{color:#fff;font-family:var(--font-sans);font-size:13px;font-weight:700
           <div class="badge-round"><small>Made</small><b>Fresh</b></div>
         </div>
         <div class="menu-tabs" role="tablist" aria-label="Menu categories">
-          <button class="mtab on" role="tab" aria-selected="true" data-panel="p-esp">Espresso <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></button>
-          <button class="mtab" role="tab" aria-selected="false" data-panel="p-lat">Lattes &amp; Specials <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></button>
-          <button class="mtab" role="tab" aria-selected="false" data-panel="p-cold">Cold &amp; Iced <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></button>
-          <button class="mtab" role="tab" aria-selected="false" data-panel="p-tea">Tea &amp; More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></button>
+          <button class="mtab on" role="tab" aria-selected="true" data-panel="p-esp">Coffee <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></button>
+          <button class="mtab" role="tab" aria-selected="false" data-panel="p-lat">Non-Coffee <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></button>
+          <button class="mtab" role="tab" aria-selected="false" data-panel="p-cold">Italian Sodas <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></button>
+          <button class="mtab" role="tab" aria-selected="false" data-panel="p-tea">Tea <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></button>
           <button class="mtab" role="tab" aria-selected="false" data-panel="p-bite">Bites <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></button>
         </div>
-        <p class="milk"><b>Milk options:</b> whole, 2%, oat, almond, and coconut. Add an extra shot to anything for $1.</p>
+        <details class="milk-details">
+          <summary>Customize your drink</summary>
+          <div class="mdbody">
+            <p><b>Milk:</b> whole, 2%, oat, almond, coconut, hemp, soy — $0.85</p>
+            <p><b>Syrup flavors</b> — $0.60: vanilla, caramel, hazelnut, salted caramel, chocolate, brown sugar, honey, maple, peppermint, lavender, toasted marshmallow, earl grey, sugar-free vanilla, sugar-free caramel, strawberry, mango, raspberry, white peach, blueberry, cherry, coconut, orange, green apple, blackberry, cranberry, banana, cantaloupe, frosted mint</p>
+            <p><b>Toppings:</b> caramel drizzle, chocolate drizzle, cold foam, whipped cream, nutmeg, cinnamon, strawberries, raspberries</p>
+            <p><b>Extra shot:</b> $1.00</p>
+          </div>
+        </details>
       </aside>
 
-      <!-- EDIT: items + prices are placeholders in your $1-10 range -->
       <div class="menu-panels reveal d1">
         <div class="mpanel on" id="p-esp" role="tabpanel">
-          <h3>Espresso</h3><p class="psub">Double shots as standard, pulled on the machine we're slightly too proud of.</p>
-          <div class="mrow"><div class="mi"><h4>Espresso</h4><p>Straight up, double shot</p></div><span class="dots" aria-hidden="true"></span><span class="mp">$3.25</span></div>
-          <div class="mrow"><div class="mi"><h4>Americano</h4><p>Espresso and hot water, simple and honest</p></div><span class="dots" aria-hidden="true"></span><span class="mp">$3.75</span></div>
-          <div class="mrow"><div class="mi"><h4>Cortado</h4><p>Equal parts espresso and steamed milk</p></div><span class="dots" aria-hidden="true"></span><span class="mp">$4.25</span></div>
-          <div class="mrow"><div class="mi"><h4>Cappuccino</h4><p>Classic ratio, proper foam</p></div><span class="dots" aria-hidden="true"></span><span class="mp">$4.75</span></div>
-          <div class="mrow"><div class="mi"><h4>Flat White</h4><p>Velvety milk, extra ristretto shot</p></div><span class="dots" aria-hidden="true"></span><span class="mp">$5.00</span></div>
-          <div class="mrow"><div class="mi"><h4>Mocha</h4><p>Real chocolate, not powder</p></div><span class="dots" aria-hidden="true"></span><span class="mp">$5.75</span></div>
+          <h3>Coffee</h3><p class="psub">Pulled on the machine we're slightly too proud of.</p>
+          <div class="mrow msize-head" aria-hidden="true"><div class="mi"></div><div class="mprice-grid"><span>8oz</span><span>12oz</span><span>16oz</span></div></div>
+          <div class="mrow"><div class="mi"><h4>Americano</h4><p>Espresso and hot water, simple and honest</p></div><div class="mprice-grid"><span>4.00</span><span>4.50</span><span>5.00</span></div></div>
+          <div class="mrow"><div class="mi"><h4>Cappuccino</h4><p>Classic ratio, proper foam</p></div><div class="mprice-grid"><span>4.50</span><span>5.50</span><span>6.00</span></div></div>
+          <div class="mrow"><div class="mi"><h4>Latte</h4><p>Double shot, steamed milk, done right</p></div><div class="mprice-grid"><span>4.50</span><span>5.50</span><span>6.00</span></div></div>
+          <div class="mrow"><div class="mi"><h4>Mocha</h4><p>Real chocolate, not powder</p></div><div class="mprice-grid"><span>5.00</span><span>5.50</span><span>6.00</span></div></div>
+          <div class="mrow"><div class="mi"><h4>Doppio</h4><p>Double shot, straight up</p></div><div class="mprice-grid"><span>3.00</span><span class="na">–</span><span class="na">–</span></div></div>
+          <div class="mrow"><div class="mi"><h4>Cortado</h4><p>Equal parts espresso and steamed milk</p></div><div class="mprice-grid"><span>3.50</span><span class="na">–</span><span class="na">–</span></div></div>
         </div>
         <div class="mpanel" id="p-lat" role="tabpanel">
-          <h3>Lattes &amp; Specials</h3><p class="psub">All syrups made in small batches behind the counter.</p>
-          <div class="mrow"><div class="mi"><h4>Classic Latte</h4><p>Double shot, steamed milk, done right</p></div><span class="dots" aria-hidden="true"></span><span class="mp">$5.25</span></div>
-          <div class="mrow"><div class="mi"><h4>Vanilla Bean Latte</h4><p>Made with real vanilla bean syrup</p></div><span class="dots" aria-hidden="true"></span><span class="mp">$5.75</span></div>
-          <div class="mrow"><div class="mi"><h4>Caramel Latte</h4><p>House caramel, a little salt</p></div><span class="dots" aria-hidden="true"></span><span class="mp">$5.75</span></div>
-          <div class="mrow"><div class="mi"><h4>Vanilla Chai Latte</h4><p>The regulars' pick, hot or iced</p></div><span class="dots" aria-hidden="true"></span><span class="mp">$5.75</span></div>
-          <div class="mrow"><div class="mi"><h4>Brown Sugar Cinnamon Latte</h4><p>Cozy in a cup</p></div><span class="dots" aria-hidden="true"></span><span class="mp">$6.00</span></div>
+          <h3>Non-Coffee</h3><p class="psub">Not a coffee person? We still want to see you.</p>
+          <div class="mrow msize-head" aria-hidden="true"><div class="mi"></div><div class="mprice-grid"><span>8oz</span><span>12oz</span><span>16oz</span></div></div>
+          <div class="mrow"><div class="mi"><h4>Matcha Latte</h4><p>Ceremonial grade, hot or iced</p></div><div class="mprice-grid"><span>5.00</span><span>5.50</span><span>6.00</span></div></div>
+          <div class="mrow"><div class="mi"><h4>Chai Tea Latte</h4><p>Spiced black tea, steamed milk</p></div><div class="mprice-grid"><span>5.00</span><span>5.50</span><span>6.00</span></div></div>
+          <div class="mrow"><div class="mi"><h4>London Fog</h4><p>Earl Grey, vanilla, steamed milk</p></div><div class="mprice-grid"><span>4.50</span><span>5.00</span><span>5.50</span></div></div>
+          <div class="mrow"><div class="mi"><h4>Hot Chocolate</h4><p>Real chocolate, whipped cream optional</p></div><div class="mprice-grid"><span>3.00</span><span>3.50</span><span>4.00</span></div></div>
+          <div class="mrow"><div class="mi"><h4>Lotus</h4><p>Fruity, layered energy refresher</p></div><div class="mprice-grid"><span class="na">–</span><span>6.00</span><span>6.50</span></div></div>
         </div>
         <div class="mpanel" id="p-cold" role="tabpanel">
-          <h3>Cold &amp; Iced</h3><p class="psub">For the nine days of Everett summer and every other day too.</p>
-          <div class="mrow"><div class="mi"><h4>Cold Brew</h4><p>Steeped 18 hours, smooth and strong</p></div><span class="dots" aria-hidden="true"></span><span class="mp">$4.75</span></div>
-          <div class="mrow"><div class="mi"><h4>Iced Latte</h4><p>Any syrup, any milk</p></div><span class="dots" aria-hidden="true"></span><span class="mp">$5.50</span></div>
-          <div class="mrow"><div class="mi"><h4>Iced Shaken Espresso</h4><p>Brown sugar and cinnamon, shaken over ice</p></div><span class="dots" aria-hidden="true"></span><span class="mp">$6.50</span></div>
-          <div class="mrow"><div class="mi"><h4>Iced Chai Latte</h4><p>Spiced, creamy, refreshing</p></div><span class="dots" aria-hidden="true"></span><span class="mp">$5.50</span></div>
-          <div class="mrow"><div class="mi"><h4>Strawberry Matcha</h4><p>Layered, and yes, it photographs well</p></div><span class="dots" aria-hidden="true"></span><span class="mp">$6.50</span></div>
-          <div class="mrow"><div class="mi"><h4>Italian Soda</h4><p>Sparkling, any syrup, add cream if you like</p></div><span class="dots" aria-hidden="true"></span><span class="mp">$5.00</span></div>
+          <h3>Italian Sodas</h3><p class="psub">Sparkling, bright, and made to your syrup.</p>
+          <div class="mrow msize-head" aria-hidden="true"><div class="mi"></div><div class="mprice-grid"><span>8oz</span><span>12oz</span><span>16oz</span></div></div>
+          <div class="mrow"><div class="mi"><h4>Italian Soda</h4><p>Sparkling, any syrup, add cream if you like</p></div><div class="mprice-grid"><span class="na">–</span><span>5.00</span><span>6.00</span></div></div>
+          <div class="mrow"><div class="mi"><h4>Redbull Italian Soda</h4><p>Italian soda with a Red Bull kick</p></div><div class="mprice-grid"><span class="na">–</span><span class="na">–</span><span>7.00</span></div></div>
         </div>
         <div class="mpanel" id="p-tea" role="tabpanel">
-          <h3>Tea &amp; More</h3><p class="psub">Not a coffee person? We still want to see you.</p>
-          <div class="mrow"><div class="mi"><h4>Matcha Latte</h4><p>Ceremonial grade, hot or iced</p></div><span class="dots" aria-hidden="true"></span><span class="mp">$5.75</span></div>
-          <div class="mrow"><div class="mi"><h4>Chai Latte</h4><p>Spiced black tea, steamed milk</p></div><span class="dots" aria-hidden="true"></span><span class="mp">$5.25</span></div>
-          <div class="mrow"><div class="mi"><h4>London Fog</h4><p>Earl Grey, vanilla, steamed milk</p></div><span class="dots" aria-hidden="true"></span><span class="mp">$5.25</span></div>
-          <div class="mrow"><div class="mi"><h4>Loose-Leaf Tea</h4><p>Rotating selection, ask what's on</p></div><span class="dots" aria-hidden="true"></span><span class="mp">$3.50</span></div>
-          <div class="mrow"><div class="mi"><h4>Hot Chocolate</h4><p>Real chocolate, whipped cream optional</p></div><span class="dots" aria-hidden="true"></span><span class="mp">$4.25</span></div>
-          <div class="mrow"><div class="mi"><h4>Steamer</h4><p>Steamed milk with any house syrup</p></div><span class="dots" aria-hidden="true"></span><span class="mp">$3.75</span></div>
+          <h3>Tea</h3><p class="psub">Loose-leaf, hot or iced.</p>
+          <div class="mrow msize-head" aria-hidden="true"><div class="mi"></div><div class="mprice-grid"><span>8oz</span><span>12oz</span><span>16oz</span></div></div>
+          <div class="mrow"><div class="mi"><h4>Tea</h4><p>Ask what's brewing</p></div><div class="mprice-grid"><span>4.00</span><span>4.00</span><span>4.00</span></div></div>
+          <div class="tea-flavors">
+            <b>Tea flavors</b>
+            White tea, White monkey picked, Black tea, Moroccan mint, English breakfast, Earl grey, Green tea
+            <b style="margin-top:10px">Decaf / caffeine-free</b>
+            Earl grey, Lemon ginger, Wild raspberry hibiscus, Pomegranate raspberry, Raspberry, Chamomile
+          </div>
         </div>
         <div class="mpanel" id="p-bite" role="tabpanel">
           <h3>Bites</h3><p class="psub">The pastry case changes daily. Go early for the almond croissant.</p>
@@ -909,7 +933,7 @@ footer h4{color:#fff;font-family:var(--font-sans);font-size:13px;font-weight:700
           <div class="mrow"><div class="mi"><h4>Honey Cake</h4><p>Layered, with a proper coffee pairing</p></div><span class="dots" aria-hidden="true"></span><span class="mp">$5.75</span></div>
         </div>
         <div class="mfoot">
-          <p>Prices are typical and can shift with the seasons. The pastry case rotates daily, so call ahead if your heart is set on something.</p>
+          <p>Coffee, non-coffee, and soda prices reflect our current in-store menu and can shift with the seasons. The pastry case rotates daily, so call ahead if your heart is set on something.</p>
           <a class="btn btn-outline" href="tel:+14254703520"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Call to Order</a>
         </div>
       </div>
