@@ -584,9 +584,11 @@ footer h4{color:#fff;font-family:var(--font-sans);font-size:13px;font-weight:700
   .t-quote{padding:26px}
   .t-stat{padding:22px}
   .fav-grid{grid-template-columns:1fr;gap:20px}
+  .fav-grid .card:nth-child(2){display:none}
   .card-media img{height:250px}
   .card-body{padding:22px 22px 24px}
   .rev-card{width:290px;padding:24px 22px 20px}
+  .rev-track{animation-duration:32s}
   .rev-badge{padding:16px 22px;gap:14px}
   .rev-badge .big{font-size:40px}
   .menu-side .mimg{height:200px}
@@ -679,10 +681,6 @@ footer h4{color:#fff;font-family:var(--font-sans);font-size:13px;font-weight:700
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
         <a class="btn btn-outline" href="#menu">See the Menu</a>
       </div>
-      <div class="hero-trust">
-        <div class="avatars" aria-hidden="true"><span>JM</span><span>MT</span><span>PS</span><span>DR</span></div>
-        <div class="tx"><b>Loved by the neighborhood</b><br><span class="gold">★★★★★</span> <span>4.6 from 77+ Google reviews</span></div>
-      </div>
     </div>
     <div class="hero-visual" id="heroVisual">
       <span class="hv-blob b1" data-depth="0.5" aria-hidden="true"></span>
@@ -693,7 +691,7 @@ footer h4{color:#fff;font-family:var(--font-sans);font-size:13px;font-weight:700
       </div>
       <div class="float float-rating" data-depth="1.6">
         <span class="score">4.6</span>
-        <div class="rmeta"><span class="gs">★★★★★</span><small>77+ Google reviews</small></div>
+        <div class="rmeta"><span class="gs">★★★★★</span><small>Google Rating</small></div>
       </div>
       <div class="float float-pill" id="heroPill" data-depth="2.1"><span class="dot" aria-hidden="true"></span><span id="heroPillText">Open Now · Everett</span></div>
       <div class="float float-mini" data-depth="1.1" aria-hidden="true">
@@ -708,7 +706,6 @@ footer h4{color:#fff;font-family:var(--font-sans);font-size:13px;font-weight:700
 <div class="wrap stats">
   <div class="stats-card reveal" role="list" aria-label="Sobar Coffee at a glance">
     <div class="stat" role="listitem"><div class="n" data-count="4.6" data-dec="1">4.6</div><div class="l">Google Rating</div></div>
-    <div class="stat" role="listitem"><div class="n" data-count="77" data-suffix="+">77+</div><div class="l">Neighbor Reviews</div></div>
     <div class="stat" role="listitem"><div class="n" data-count="6">6</div><div class="l">Days Open a Week</div></div>
     <div class="stat" role="listitem"><div class="n">$1–10</div><div class="l">Easy on the Wallet</div></div>
   </div>
@@ -737,7 +734,7 @@ footer h4{color:#fff;font-family:var(--font-sans);font-size:13px;font-weight:700
              onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=1200&q=80'">
         <span class="cap">The corner on Colby Ave</span>
       </div>
-      <div class="tile t-stat"><div class="big">4.6★</div><div class="sm">Rated by 77+ of your neighbors on Google</div></div>
+      <div class="tile t-stat"><div class="big">4.6★</div><div class="sm">Rated by your neighbors on Google</div></div>
       <div class="tile img t-tall">
         <img src="images/bento-3.jpg" alt="Almond croissant and a latte at Sobar Coffee" loading="lazy"
              onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=700&q=80'">
@@ -824,7 +821,7 @@ footer h4{color:#fff;font-family:var(--font-sans);font-size:13px;font-weight:700
       </div>
       <div class="rev-badge">
         <span class="big">4.6</span>
-        <div><span class="stars" style="--fill:92%" role="img" aria-label="4.6 out of 5 stars"><span aria-hidden="true">★★★★★</span><span class="fill" aria-hidden="true">★★★★★</span></span><small>From 77 Google reviews</small></div>
+        <div><span class="stars" style="--fill:92%" role="img" aria-label="4.6 out of 5 stars"><span aria-hidden="true">★★★★★</span><span class="fill" aria-hidden="true">★★★★★</span></span><small>Google Rating</small></div>
       </div>
     </div>
   </div>
@@ -1077,7 +1074,7 @@ footer h4{color:#fff;font-family:var(--font-sans);font-size:13px;font-weight:700
 
 <!-- MOBILE/TABLET STICKY CTA BAR -->
 <nav class="mobile-cta" aria-label="Quick actions">
-  <a class="mcta-call" href="tel:+14254703520"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Call Now</a>
+  <a class="mcta-call" href="https://order.online/business/~14298929/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>Order Online</a>
   <a class="mcta-dir" href="https://www.google.com/maps/dir/?api=1&amp;destination=Sobar+Coffee,+2820+Colby+Ave,+Everett,+WA+98201" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>Directions</a>
 </nav>
 
